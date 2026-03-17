@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Clean Energy Website</title>
+
+    <meta http-equiv="refresh" content="4;url = home.html">
+
+    <style>
+
+        body{
+            background-image: url(bg.jpeg);
+            background-size:cover;
+            background-position:center;
+            text-align:center;
+            color:white;
+            font-family: 'Inter', sans-serif;
+            margin: 20px;
+            padding: 50px;
+        }
+        h1,h2,h3{
+            font-family: 'Poppins', sans-serif;
+        }
+        h1,h3{
+            color: white;
+        }
+        h2{
+            color: rgb(100, 171, 100);
+        }
+
+        /* .overlay{
+            background:rgba(14, 84, 41, 0.662);
+            border-radius: 10px;
+            
+        } */
+
+        .loader{
+            width:60px;
+            height:60px;
+            border:8px solid #f3f3f3;
+            border-top:8px solid rgb(9, 16, 13);
+            border-radius:50%;
+            margin:auto;
+            transition: transform 1s linear;
+        }
+
+        button{
+            padding:10px 20px;
+            font-size:16px;
+            margin-top:20px;
+            border-radius: 25px;
+            border: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="overlay">
+
+    <h1>Affordable & Clean Energy</h1>
+    <h2>for the future</h2>
+
+    <h3>Promoting clean and affordable energy solutions for a sustainable and better future. </h3><br>
+
+    <h3>A project by:</h3>
+
+    <h3>Thivina Abishek | Damian De Cruz | Danella De Cruz | Randil Shehan</h3><br>
+
+    <div class="loader"></div>
+
+    <p id="countdown">Entering site in 4...</p>
+
+    <button id="skip">Skip Intro</button>
+
+    </div>
+
+    <script>
+
+        let loader = document.querySelector(".loader");
+        let angle = 0;
+
+        setInterval(function(){
+            angle += 360;
+            loader.style.transform = "rotate(" + angle + "deg)";
+
+        },1000);
+
+        let time = 4;
+        let countdown = document.getElementById("countdown");
+
+        setInterval(function(){
+            time--;
+            countdown.textContent = "Entering site in "+ time +"...";
+
+             if(time <= 0){
+                clearInterval(timer);
+                window.location.href = "home.html";
+            }
+            
+        },1000);
+
+        document.getElementById("skip").onclick = function(){
+            window.location.href = "home.html";
+        }
+
+    </script>
+
+</body>
+</html>

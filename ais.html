@@ -7,12 +7,12 @@
     <title>AIS</title>
     <style>
         body{
-            background-color: black;
-            color: white;
+            background-color: rgb(148, 144, 144);
+            color: rgb(5, 5, 5);
         }
         .actionCards{
-            background-color: rgba(87, 87, 86, 0.662);
-            color: white;
+            background-color: rgba(239, 239, 233, 0.662);
+            color: rgb(0, 0, 0);
             border-radius: 10px;
             text-align: left;
             padding: 20px;
@@ -104,13 +104,16 @@
     </section>
 
     <script>
-        const actionCards = document.querySelectorAll(".actionCards")
-
-        function ChangeColor(){
-            event.target.style.border = "2px solid white";
+        const actionCards = document.querySelectorAll(".actionCards");
+        function ChangeColor(event){
+            event.currentTarget.style.backgroundColor = "green";
         }
-        actionCards.addEventListener("click", ChangeColor);
 
+        actionCards.forEach(card => {
+            card.addEventListener("click", ChangeColor);
+        });
+
+        
     </script>
 
     
