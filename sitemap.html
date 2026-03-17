@@ -18,6 +18,11 @@
             height: auto;
             border: 2px solid black;
         }
+        svg path {
+            stroke: #2C9452;
+            stroke-width: 1px;
+            fill: none;
+        }
         .nodeBox {
             stroke-width: 1;
             stroke: whitesmoke;
@@ -33,7 +38,7 @@
             transition: filter 0.3 ease;
         }
         .hoverEffect:hover rect{
-            fill: #1c7a3fea;
+            fill: #038031;
             cursor: pointer;
             filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3));
         }
@@ -50,52 +55,63 @@
         <svg viewbox="0 0 1000 600">
             <!--SplashScreen-->
             <g class="hoverEffect">
-                <rect x="460" y="10" rx="10" ry="10" width="80" height="80" class="nodeBox" />
+                <rect x="460" y="10" rx="10" ry="10" width="80" height="80" class="nodeBox" id="SPLASH" />
                 <text x="500" y="70" class="boxText">SPLASH SCREEN</text>
                 <image href="images/SPLASHSCREEN.png" x="475" y="15" width="50" height="50" alt="splash" />
             </g>
 
             <!--Home-->
             <g class="hoverEffect">
-                <rect x="460" y="120" rx="10" ry="10" width="80" height="80" class="nodeBox" />
+                <rect x="460" y="120" rx="10" ry="10" width="80" height="80" class="nodeBox" id="HOME" />
                 <text x="500" y="180" class="boxText">HOME</text>
                 <image href="images/HOME.png" x="475" y="125" width="50" height="50" alt="home" />
             </g>
             
             <!--Content-->
             <g class="hoverEffect">
-                <rect x="460" y="315" rx="10" ry="10" width="80" height="80" class="nodeBox" />
+                <rect x="460" y="315" rx="10" ry="10" width="80" height="80" class="nodeBox" id="CONTENT" />
                 <text x="500" y="375" class="boxText">CONTENT</text>
                 <image href="images/CONTENT.png" x="475" y="320" width="50" height="50" alt="content" />
             </g>
 
             <!--Content subPage 1-->
             <g class="hoverEffect">
-                <rect x="190" y="510" rx="10" ry="10" width="80" height="80" class="nodeBox" />
+                <rect x="190" y="510" rx="10" ry="10" width="80" height="80" class="nodeBox" id="PAGE1" />
                 <text x="230" y="570" class="boxText">PAGE 1</text>
                 <image href="images/CONTENT_PAGE.png" x="205" y="515" width="50" height="50" alt="page1" />
             </g>
 
             <!--Content subPage 2-->
             <g class="hoverEffect">
-                <rect x="370" y="510" rx="10" ry="10" width="80" height="80" class="nodeBox" />
+                <rect x="370" y="510" rx="10" ry="10" width="80" height="80" class="nodeBox" id="PAGE2" />
                 <text x="410" y="570" class="boxText">PAGE 2</text>
                 <image href="images/CONTENT_PAGE.png" x="385" y="515" width="50" height="50" alt="page2" />
             </g>
 
             <!--Content subPage 3-->
             <g class="hoverEffect">
-                <rect x="550" y="510" rx="10" ry="10" width="80" height="80" class="nodeBox" />
+                <rect x="550" y="510" rx="10" ry="10" width="80" height="80" class="nodeBox" id="PAGE3" />
                 <text x="590" y="570" class="boxText">PAGE 3</text>
                 <image href="images/CONTENT_PAGE.png" x="565" y="515" width="50" height="50" alt="page3" />
             </g>
 
             <!--Content subPage 4-->
             <g class="hoverEffect">
-                <rect x="730" y="510" rx="10" ry="10" width="80" height="80" class="nodeBox" />
+                <rect x="730" y="510" rx="10" ry="10" width="80" height="80" class="nodeBox" id="PAGE4" />
                 <text x="770" y="570" class="boxText">PAGE 4</text>
                 <image href="images/CONTENT_PAGE.png" x="745" y="515" width="50" height="50" alt="page4" />
             </g>
+
+            <!--Paths-->
+            <g>
+                <path d="M 500 90 l 0 30" />
+                <path d="M 500 200 l 0 115" />
+                <path d="M 500 395 C 500 460, 230 450, 230 510" />
+                <path d="M 500 395 C 500 450, 410 450, 410 510" />
+                <path d="M 500 395 C 500 450, 590 450, 590 510" />
+                <path d="M 500 395 C 500 460, 770 450, 770 510" />
+            </g>
+            
         </svg>
     </main>
     <footer>
