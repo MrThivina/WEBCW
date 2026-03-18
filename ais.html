@@ -9,73 +9,46 @@
     <link rel="stylesheet" href="styles.css">
     <title>AIS</title>
     <style>
-        body{
+        .a-cards{
             width: 80%;
-            background-color: white;
-            color: rgb(5, 5, 5);
-            font-family: "Poppins" , sans-serif;
+            text-align: center;
             display: flex;
-            justify-content: center;
             align-items: center;
+            margin-left: 10%;
         }
         .actionCards{
-            background-color: #54d46ea9;
-            color: rgb(0, 0, 0);
-            border-radius: 10px;
-            text-align: left;
-            padding: 10px;
-            margin-top: 15px;
-        }
-        .actionCards:hover{
-            transform: translateY(-8px) scale(1.05);
-            transition: transform linear 2ms;
-            box-shadow:0 20px 35px rgba(0,0,0,0.3);
-        }
-        h2{
-            margin-left: 20px;
-        }
-        img{
-            float: left;
-            margin: 5px;
-            max-width: 250px;
-            height: 400px;
+            background-color: rgba(81, 192, 81, 0.71);
             border-radius: 20px;
-
-            
-        }
-        #section1{
-            float: left;
-            width: 35%;
-            text-align: center;
-            margin-left: 20px;
-        }
-
-        #section2{
-            float: right;
-            width: 35%;
-            text-align: center;
-            margin-right: 20px;
-        }
-        div p,h4{
-            text-align: justify;
-            margin-left: 5px;
-        }
-        .s-feedback{
-            background-color: rgb(167, 166, 166);
-            border-radius: 1;
-            margin: 10px;
-            width: 100%;
-            padding: 20px;
-            text-align: center;
+            padding: 10px;
+            margin-top: 10%;
+            margin-right: 10%;
         }
         .selected{
-            background-color: hsl(132, 60%, 58%);;
+            background-color: rgb(81, 192, 81);
         }
+        h2{
+            text-align: center;
+        }
+        #feedbackSummary{
+            padding: 6.5%;
+            background-color: rgb(222, 232, 182);
+            text-align: center;
+            border-radius: 20px;
+            margin-top: 3%;
+            margin-left:3% ;
+            margin-right: 3%;
+        }
+        #impactScore{
+            margin-bottom:100px;
+            text-align: left;
+            margin-top: 1px;
+        }
+
     </style>
 
 </head>
 <body>
-    <header>
+        <header>
             <nav>
                 <ul>
                     <li><a href="home.html">Home</a></li>
@@ -85,51 +58,54 @@
                 </ul>
             </nav>
         </header>
-
     <main>
-    
         <h2>Choose your actions</h2>
-        <section id="section1">
-            <div class = "actionCards" id="1">
-                <h3>Switch to LED Lighting</h3>
-                <p>Replacing traditional bulbs with energy-efficient LED lights reduces electricity consumption and lowers carbon emissions. LEDs use significantly less energy and last longer, making them a simple way for students and households to reduce energy waste.</p>
-                <h4>Impact Points: 2</h4>
-            </div>
+        <div class="a-cards">
+            <section id="section1">
+                <div class = "actionCards" id="1">
+                    <h3>Switch to LED Lighting</h3>
+                    <p>Replacing traditional bulbs with energy-efficient LED lights reduces electricity consumption and lowers carbon emissions. LEDs use significantly less energy and last longer, making them a simple way for students and households to reduce energy waste.</p>
+                    <h4>Impact Points: 2</h4>
+                </div>
 
-            <div class = "actionCards" id="2">
-                <h3>Turn Off Unused Electronics</h3>
-                <p>Many electronic devices continue using power even when they are not actively used. Turning off lights, laptops, and other electronics when leaving a room helps reduce unnecessary electricity usage and supports energy conservation.</p>
-                <h4>Impact Points: 1</h4>
-            </div>
+                <div class = "actionCards" id="2">
+                    <h3>Turn Off Unused Electronics</h3>
+                    <p>Many electronic devices continue using power even when they are not actively used. Turning off lights, laptops, and other electronics when leaving a room helps reduce unnecessary electricity usage and supports energy conservation.</p>
+                    <h4>Impact Points: 1</h4>
+                </div>
 
-            <div class = "actionCards" id="3">
-                <h3>Use Public Transport or Cycling</h3>
-                <p>Transport powered by fossil fuels contributes heavily to carbon emissions. Choosing public transport, cycling, or walking helps reduce energy demand and lowers environmental impact while supporting more sustainable cities.</p>
-                <h4>Impact Points: 3</h4>
-            </div>
-        </section>
+                <div class = "actionCards" id="3">
+                    <h3>Use Public Transport or Cycling</h3>
+                    <p>Transport powered by fossil fuels contributes heavily to carbon emissions. Choosing public transport, cycling, or walking helps reduce energy demand and lowers environmental impact while supporting more sustainable cities.</p>
+                    <h4>Impact Points: 3</h4>
+                </div>
+            </section>
 
-        <section id="section2">
+            <section id="section2">
+                <div class = "actionCards" id="4">
+                    <h3>Use Renewable Energy Providers</h3>
+                    <p>Replacing traditional bulbs with energy-efficient LED lights reduces electricity consumption and lowers carbon emissions. LEDs use significantly less energy and last longer, making them a simple way for students and households to reduce energy waste.</p>
+                    <h4>Impact Points: 4</h4>
+                </div>
 
-            <div class = "actionCards" id="4">
-                <h3>Use Renewable Energy Providers</h3>
-                <p>Replacing traditional bulbs with energy-efficient LED lights reduces electricity consumption and lowers carbon emissions. LEDs use significantly less energy and last longer, making them a simple way for students and households to reduce energy waste.</p>
-                <h4>Impact Points: 4</h4>
-            </div>
+                <div class = "actionCards" id="5">
+                    <h3>Install Solar Panels</h3>
+                    <p>Solar panels convert sunlight into electricity without producing greenhouse gases. Although installation requires investment, solar energy provides a long-term clean energy solution that can significantly reduce household carbon emissions.</p>
+                    <h4>Impact Points: 5</h4>
+                </div>
 
-            <div class = "actionCards" id="5">
-                <h3>Install Solar Panels</h3>
-                <p>Solar panels convert sunlight into electricity without producing greenhouse gases. Although installation requires investment, solar energy provides a long-term clean energy solution that can significantly reduce household carbon emissions.</p>
-                <h4>Impact Points: 5</h4>
-            </div>
+                <div class = "actionCards" id="6">
+                    <h3>Unplug Chargers When Not in Use</h3>
+                    <p>Chargers and electronic devices still consume small amounts of energy when plugged in, even if they are not charging anything. Unplugging chargers helps prevent this “standby power” waste and contributes to better energy efficiency.</p>
+                    <h4>Impact Points: 1</h4>
+                </div>    
+            </section>
+        </div>
+        <div id="feedbackSummary">
+            <p id="impactScore">Total impact score:</p>
+        </div>
 
-            <div class = "actionCards" id="6">
-                <h3>Unplug Chargers When Not in Use</h3>
-                <p>Chargers and electronic devices still consume small amounts of energy when plugged in, even if they are not charging anything. Unplugging chargers helps prevent this “standby power” waste and contributes to better energy efficiency.</p>
-                <h4>Impact Points: 1</h4>
-            </div>
-            
-        </section>
+
     </main>
     
     <footer>
