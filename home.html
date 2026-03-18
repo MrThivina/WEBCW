@@ -1,61 +1,84 @@
 <!DOCTYPE html>
 <html lang ="en">
-<head>
-    <meta charset ="UTF-8">
-    <meta name ="viewport" content = "width=device-width ,initial-scale=1.0">
-    <title>GoGreen</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <a href="home.html">Home</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="feedback.html">Feedback</a>
-                <a href="team.html">Team</a>
-            </ul>
-        </nav>
-    </header>
+    <head>
+        <meta charset ="UTF-8">
+        <meta name ="viewport" content = "width=device-width ,initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <title> web</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            hr{
+                width: 75%;
+                display: flex;
+                justify-content: right;
+                align-items: right;
+            }
+            .text1{
+                color: green;
+                font-size: 50px;
+                margin-bottom: 5px;
+            }
+            .text2{
+                color: rgb(52, 117, 173);
+                font-size: 40px;
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+            .welcome {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 70vh;
+                text-align: center;
+                background-color: rgba(255, 255, 255, 0.215);
+                padding: 0 10px;
+            }
+            .glass{
+                background: rgba(255, 255, 255, 0.2);
+                padding: 100px;
+                border-radius: 15px;
 
-    <main>
-        <div class="Welcome">
-            <h1 class = "text1">Powering The World,</h1>
-            <h1 class="text2">Protecting The Planet.</h1>
-            <p>Energy is the golden thread that conects economic growth, social equity and an environment that allows the world to thrive. Discover how clean energy transforms lives.</p>
-        </div>
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
 
-        <section class = "card-container">
+                border: 1px solid rgba(255, 255, 255, 0.3);
 
-            <div class="card">
-                <h3>Why Clean Energy Matter</h3>
-                <p>Renewable energy reduces greenhouse gases and protects the environment.</p>
+                text-align: center;
+                max-width: 600px;
+
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <hr>
+
+        <main>
+            <div class="welcome">
+                <div class="glass">
+                    <h1 class = "text1">Powering The World,</h1>
+                    <h1 class="text2">Protecting The Planet.</h1>
+                    <p>Energy is the golden thread that conects economic growth, social equity and an environment that allows the world to thrive. Discover how clean energy transforms lives.</p>
+                </div>
             </div>
-
-            <div class="card">
-                <h3>Benefits of Renewable Energy</h3>
-                <p>Solar and wind energy are sustainable and reduce dependence on fossil fuels.</p>
-            </div>
-
-            <div class="card">
-                <h3>Actions You Can Take</h3>
-                <p>You don't have to wait.Turn off unused lights,use energy-efficient devices.
-                    Every small action compounds into massive global impact.
-                </p>
-            </div>
-        </section>
-
-        <h2>Explore Out Topics</h2>
-
-    </main>
-    <footer>
-        <p><a href="#">page editor</a></p>
-
-        <p><a href="#">Validation</a></p>
-
-    </footer>
-</body>
+        </main>
+        <footer>
+            <p><a href="#">page editor</a></p>
+            <p><a href="#">Validation</a></p>
+        </footer>
+    </body>
 </html>

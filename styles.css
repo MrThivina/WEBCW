@@ -1,15 +1,15 @@
 body{
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin:0;
-    
-
+    background-color: rgba(255, 255, 255, 0.215);
 }
 
 header{
-    color:rgb(241, 236, 236);
-    padding:20px;
-    
+    padding-top:15px;
+}
 
+nav{
+    padding-right: 12.5%;
 }
 
 nav ul{
@@ -21,40 +21,27 @@ nav ul{
 }
 
 nav ul li{
-    margin:0;
-
+    gap: 5px;
 }
 
 nav a{
     display:block;
     padding:15px 20px;
-    color:green;
+    color:rgba(24, 118, 24, 0.871);
     text-decoration:none;
-    font-weight:400;
-    border-radius: 15px;
-
+    font-weight:600;
+    border-radius: 20px;
 }
 
 nav ul a:hover{
-    background-color: green;
+    background-color: rgba(24, 118, 24, 0.871);
     color:white;
     transition: 0.3ms ease;
 }
 
-main{
-    max-width:900px;
-    margin:20px auto;
-    padding:20px;
-    background:white;
-    border-radius:5px;
-}
-
-
 footer{
     color:white;
     text-align:center;
-    padding:15px;
-    margin-top:20px;
 }
 
 footer a {
