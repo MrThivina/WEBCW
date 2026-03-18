@@ -47,6 +47,8 @@ nav ul a:hover{
 }
 
 footer{
+    margin-top: 10px;
+    width: 100%;
     color:white;
     text-align:center;
 }
