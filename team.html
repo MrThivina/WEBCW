@@ -9,6 +9,42 @@
         <title>Document</title>
         <link rel="stylesheet" href="styles.css">
         <style>
+            .p-cards{
+                display: flex;
+                gap: 20px;              
+                justify-content: center;
+                flex-wrap: wrap; 
+            }
+            .p-card1{
+                flex: 1 1 250px;
+                max-width: 300px;
+                height: 400px;
+                border-radius: 10px;
+            }
+            .p-card1{
+                background: rgba(226, 220, 220, 0.5);
+                text-align: center;
+                padding: 20px;
+                transition: 0.3s ease;
+            }
+            .p-card1:hover {
+                box-shadow: 0 0 15px rgba(0, 150, 255, 0.8);
+            }
+            .p-card1 img{
+                margin: 30px 0px;
+                height: 150px;
+                width: 150px;
+                object-fit: cover;
+                border-radius: 50%;
+                object-fit: cover;
+                transition: transform 0.4s ease;
+            }
+            .p-card1 img:hover{
+                transform: scale(1.1);
+            }
+            .p-card1 h4{
+                margin: 0;
+            }
             
         </style>
     </head>
@@ -20,11 +56,23 @@
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="feedback.html">Feedback</a></li>
                     <li><a href="team.html">Team</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
                 </ul>
             </nav>
         </header>
 
         <hr>
+
+        <section class="p-cards">
+            <div class="p-card1">
+                <img src="randil.jpeg" alt="Randil">
+                <div class="about">
+                    <h4>Randil Shehan</h4>
+                    <h4>20250444</h4>
+                    <p>Student 01</p>
+                </div>
+            </div>
+        </section>
     
     </body>
 </html>
