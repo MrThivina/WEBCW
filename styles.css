@@ -35,7 +35,7 @@ nav a{
 
 }
 
-nav ul li a:hover{
+nav ul a:hover{
     background-color: green;
     color:white;
 }
