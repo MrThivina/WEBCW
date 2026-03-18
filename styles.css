@@ -38,6 +38,7 @@ nav a{
 nav ul a:hover{
     background-color: green;
     color:white;
+    transition: 0.3ms ease;
 }
 
 main{
