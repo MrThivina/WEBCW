@@ -9,14 +9,14 @@ header{
 }
 
 hr{
-    width: 75%;
+    width: 80%;
     display: flex;
     justify-content: right;
     align-items: right;
 }
 
 nav{
-    padding-right: 12.5%;
+    padding-right: 10%;
 }
 
 nav ul{
@@ -43,7 +43,7 @@ nav a{
 nav ul a:hover{
     background-color: rgba(24, 118, 24, 0.871);
     color:white;
-    transition: 0.3ms ease;
+    transition: 0.5s ease;
 }
 
 footer{
