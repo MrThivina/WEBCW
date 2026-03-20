@@ -69,3 +69,22 @@ footer a:hover{
     flex-wrap:wrap;
 
 }
+
+.card{
+    background-color:white;
+    padding:20px;
+    border-radius:10px;
+    width:300px;
+}
+
+/*GALLERY*/
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
