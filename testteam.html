@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .team{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 5%;
+                gap: 5%;
+                background-color: bisque;
+            }
+            .student{
+                position: relative;
+                width: 20%;
+                text-align: center;
+            }
+            .student img{
+                display: block;
+                height: 100%;
+                width: 100%;
+                border-radius: 15px;
+            }
+            .name{
+                position: absolute;
+                top: 1.5%;
+                width: 100%;
+                text-align: center;
+                color:white;
+                z-index: 1;
+            }
+            .student::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.2);
+                border-radius: 15px;
+            }           
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <hr>
+
+        <main>
+
+            <div class="team">
+                <div class="student">
+                    <img src="cardimages/randil1.jpeg" alt="randil">
+                    <div class="name">
+                        <h3>Randil Shehan</h3>
+                        <div class="details"></div>
+                    </div>
+                </div>
+
+                <div class="student">
+                    <img src="cardimages/randil1.jpeg" alt="randil">
+                    <div class="name">
+                        <h3>Danella De Cruz</h3>
+                        <div class="details"></div>
+                    </div>
+                </div>
+
+                <div class="student">
+                    <img src="cardimages/randil1.jpeg" alt="randil">
+                    <div class="name">
+                        <h3>Thivina Abhishek</h3>
+                        <div class="details"></div>
+                    </div>
+                </div>
+
+                <div class="student">
+                    <img src="cardimages/randil1.jpeg" alt="randil">
+                    <div class="name">
+                        <h3>Damian De Cruz</h3>
+                        <div class="details"></div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </body>
+</html>
