@@ -27,9 +27,10 @@
         .actionCards:hover{ transform: translateY(-8px) scale(1.05); 
             transition: transform linear 2ms; 
             box-shadow:0 20px 35px rgba(0,0,0,0.3); }
-            
+
         .selected{
             background-color: rgb(48, 160, 111);
+            border: 2px solid rgba(30, 33, 32, 0.678);
         }
         h2,h5{
             text-align: center;
@@ -53,8 +54,7 @@
             text-align: center;
         }
         #feedbackSummary{
-            margin: 6.5%;
-            background-color: rgb(222, 232, 182);
+            background-color: rgba(164, 224, 111, 0.473);
             text-align: center;
             border-radius: 20px;
             margin-top: 3%;
@@ -62,8 +62,8 @@
             margin-right: 3%;
         }
         #impactScore{
-            margin-bottom:100px;
-            text-align: left;
+            text-align: center;
+            font-weight: bold;
             padding: 3%;
             margin-top: 0.01px;
         }
@@ -81,6 +81,16 @@
             width: 30%;
             clear: right;
         
+        }
+        #bar{
+            background-color: rgb(179, 175, 175);
+            padding: 5px;
+            text-align: center;
+            align-items: center;
+            border-radius: 5px;
+            width: 85%;
+            margin: 5%;
+         
         }
 
     </style>
@@ -102,7 +112,7 @@
         <h4 id="desc">Select the actions you are willing to take and see your clean energy impact score</h4>
         <div class="a-cards">
             <section id="section1">
-                <div class = "actionCards" id="1">
+                <div class = "actionCards" id="1" >
                     <img src="images/LED.png" alt = "LED light bulb replacing traditional bulb to save energy"><br>
                     <h3>Switch to LED Lighting</h3><br>
                     <p>LEDs use significantly less energy and last longer than traditional bulbs reducing electricity consumption and carbon emissions. </p>
@@ -149,6 +159,7 @@
         </div>
         <div id="feedbackSummary">
             <p id="impactScore">Total impact score:</p>
+            <div id="bar"></div>
         </div>
 
 
@@ -169,6 +180,18 @@
         actionCards.forEach(card => {
             card.addEventListener("click", ChangeColor);
         });
+
+        let totalScore = 0;
+
+        function updateImpactScore(event){
+            if()
+        }
+        
+        actionCards.forEach(card=>{
+            card.addEventListener("click", updateImpactScore)
+        })
+
+
 
     </script>
 
