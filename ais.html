@@ -44,12 +44,10 @@
         #section2{
             margin-left: 80px;
         }
-        p{
+        main p{
             text-align: justify;
         }
-        h4{
-            text-align: left;
-        }
+       
         #desc{
             text-align: center;
         }
@@ -68,7 +66,6 @@
             text-align: center;
             font-weight: bold;
             color: white;
-
             
         }
         .ip{
@@ -171,11 +168,6 @@
 
 
     </main>
-    
-    <footer>
-        <p><a href="#">page editor</a></p>
-        <p><a href="#">Validation</a></p>
-    </footer>
 
     <script>
         const actionCards = document.querySelectorAll(".actionCards");
@@ -205,21 +197,28 @@
             }
 
             document.getElementById("impactScore").textContent = "Total impact score: " + totalScore;
+            if(totalScore == 0){
+                document.getElementById("bar").style.backgroundColor = "rgb(179, 175, 175)";
+                document.getElementById("feedbackSummary").style.backgroundImage = "none";
+                document.getElementById("des").textContent = "";
 
-            if(totalScore<=5){
+
+            }else if( totalScore<=5){
                 document.getElementById("bar").style.backgroundColor = "red";
                 document.getElementById("feedbackSummary").style.backgroundImage = "url(images/l-impact.png)";
                 document.getElementById("des").textContent = "Your current actions have a low impact. Try selecting more sustainable choices to better support clean energy.";
-
+   
             }else if(totalScore<=11){
                 document.getElementById("bar").style.backgroundColor = "orange";
                 document.getElementById("feedbackSummary").style.backgroundImage = "url(images/m-impact.png)";
                 document.getElementById("des").textContent = "You are making a positive difference. Your actions contribute to cleaner energy, but there is still room to improve.";        
             
-            }else{
+            }else if(totalScore<=16){
                 document.getElementById("bar").style.backgroundColor = "green";
                 document.getElementById("feedbackSummary").style.backgroundImage = "url(images/h-impact.png)";
                 document.getElementById("des").textContent = "Excellent! Your actions show a strong commitment to clean energy and sustainability. You are making a significant impact.";        
+            }else{
+                document.getElementById("feedbackSummary").style.backgroundColor = "rgba(164, 224, 111, 0.473)";
             }
         }
 
@@ -227,11 +226,12 @@
             card.addEventListener("click", handleCardClick);
         });
 
-       
-
-
     </script>
-
+    
+    <footer>
+        <p><a href="#">page editor</a></p>
+        <p><a href="#">Validation</a></p>
+    </footer>
 
 </body>
 </html>
