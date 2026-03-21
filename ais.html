@@ -67,7 +67,7 @@
             padding: 3%;
             margin-top: 0.01px;
         }
-        #ip{
+        .class{
             border-radius: 10px;
             background-color: rgba(240, 255, 255, 0.671);
             color: black;
@@ -113,21 +113,21 @@
                     <img src="images/LED.png" alt = "LED light bulb replacing traditional bulb to save energy"><br>
                     <h3>Switch to LED Lighting</h3><br>
                     <p>LEDs use significantly less energy and last longer than traditional bulbs reducing electricity consumption and carbon emissions. </p>
-                    <h4 id="ip">Impact Points: 2</h4>
+                    <h4 class="ip">Impact Points: 2</h4>
                 </div>
 
                 <div class = "actionCards" id="2">
                     <img src="images/electronics.png" alt="Electronic devices turned off to reduce energy consumption">
                     <h3>Turn Off Unused Electronics</h3><br>
                     <p>Unnecessary electricity usage is reduced and energy is conserved by turning off electronic devices.</p>
-                    <h4 id="ip">Impact Points: 1</h4>
+                    <h4 class="ip">Impact Points: 1</h4>
                 </div>
 
                 <div class = "actionCards" id="3">
                     <img src="images/transport.png" alt="Person cycling and using public transport to reduce emissions">
                     <h3>Use Public Transport or Cycling</h3><br>
                     <p>Choosing public transport helps reduce energy demand; supporting more sustainable cities.</p>
-                    <h4 id="ip">Impact Points: 3</h4>
+                    <h4 class="ip">Impact Points: 3</h4>
                 </div>
             </section>
 
@@ -136,21 +136,21 @@
                     <img src="images/renew.png" alt="House powered by solar panels and renewable energy sources">
                     <h3>Use Renewable Energy Providers</h3><br>
                     <p>Switching to renewable energy sources reduces carbon emissions and supports a cleaner, more sustainable future.</p>
-                    <h4 id="ip">Impact Points: 4</h4>
+                    <h4 class="ip">Impact Points: 4</h4>
                 </div>
 
                 <div class = "actionCards" id="5">
                     <img src="images/solar.png" alt="Solar panels installed on a house generating clean energy">
                     <h3>Install Solar Panels</h3><br>
                     <p>Solar energy provides a long-term  solution that can significantly reduce household carbon emissions.</p>
-                    <h4 id="ip">Impact Points: 5</h4>
+                    <h4 class="ip">Impact Points: 5</h4>
                 </div>
 
                 <div class = "actionCards" id="6">
                     <img src="images/unplug.png" alt="Charger being unplugged to prevent energy waste">
                     <h3>Unplug Chargers When Not in Use</h3>
                     <p>Unplugging chargers helps prevent “standby power” waste and contributes to better energy efficiency.</p>
-                    <h4 id="ip">Impact Points: 1</h4>
+                    <h4 class="ip">Impact Points: 1</h4>
                 </div>    
             </section>
         </div>
@@ -196,24 +196,26 @@
             }
 
             document.getElementById("impactScore").textContent = "Total impact score: " + totalScore;
+
+            if(totalScore<=5){
+                document.getElementById("bar").style.backgroundColor = "red";
+                document.getElementById("des").textContent = "Your current actions have a low impact. Try selecting more sustainable choices to better support clean energy.";
+
+            }else if(totalScore<=11){
+                document.getElementById("bar").style.backgroundColor = "orange";
+                document.getElementById("des").textContent = "You are making a positive difference. Your actions contribute to cleaner energy, but there is still room to improve.";        
+            
+            }else{
+                document.getElementById("bar").style.backgroundColor = "green";
+                document.getElementById("des").textContent = "Excellent! Your actions show a strong commitment to clean energy and sustainability. You are making a significant impact.";        
+            }
         }
 
         actionCards.forEach(card => {
             card.addEventListener("click", handleCardClick);
         });
 
-       if(totalScore<=5){
-            document.getElementById("bar").style.backgroundColor = "red";
-            document.getElementById("des").textContent = "Your current actions have a low impact. Try selecting more sustainable choices to better support clean energy.";
-
-       }else if(totalScore<=11){
-            document.getElementById("bar").style.backgroundColor = "orange";
-            document.getElementById("des").textContent = "You are making a positive difference. Your actions contribute to cleaner energy, but there is still room to improve.";        
        
-        }else if(totalScore<=16){
-            document.getElementById("bar").style.backgroundColor = "green";
-            document.getElementById("des").textContent = "Excellent! Your actions show a strong commitment to clean energy and sustainability. You are making a significant impact.";        
-        }
 
 
     </script>
