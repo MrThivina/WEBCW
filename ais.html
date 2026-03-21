@@ -169,25 +169,41 @@
 
     <script>
         const actionCards = document.querySelectorAll(".actionCards");
-        
-        function ChangeColor(event){
-            event.currentTarget.classList.toggle("selected");
-        }
-
-        actionCards.forEach(card => {
-            card.addEventListener("click", ChangeColor);
-        });
 
         let totalScore = 0;
 
-        function updateImpactScore(event){
-            if()
-        }
-        
-        actionCards.forEach(card=>{
-            card.addEventListener("click", updateImpactScore)
-        })
+        function handleCardClick(event){
 
+            let card = event.currentTarget;
+
+        // toggle selection colour
+        card.classList.toggle("selected");
+
+        // get points from ID (since you didn't use data-points)
+        let points = 0;
+
+        if(card.id == "1") points = 2;
+        if(card.id == "2") points = 1;
+        if(card.id == "3") points = 3;
+        if(card.id == "4") points = 4;
+        if(card.id == "5") points = 5;
+        if(card.id == "6") points = 1;
+
+        // add or remove points
+        if(card.classList.contains("selected")){
+            totalScore += points;
+        } else {
+            totalScore -= points;
+        }
+
+        // update score display
+        document.getElementById("impactScore").textContent = "Total impact score: " + totalScore;
+    }
+
+    // apply click event
+    actionCards.forEach(card => {
+        card.addEventListener("click", handleCardClick);
+    });
 
 
     </script>
