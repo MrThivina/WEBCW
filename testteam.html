@@ -28,6 +28,8 @@
                 height: 100%;
                 width: 100%;
                 border-radius: 15px;
+                transition: 0.3s;
+                z-index: 1;
             }
             .name{
                 position: absolute;
@@ -43,6 +45,22 @@
                 inset: 0;
                 background: rgba(0, 0, 0, 0.2);
                 border-radius: 15px;
+                z-index: 0;
+            }
+            .student:hover {
+                transform: scale(1.05);
+            }
+            .student:hover::after {
+                background: rgba(0,0,0,0.4);
+            }
+            .student hr{
+                position: absolute;
+                bottom: 50px;
+                left: 5%;
+                width: 90%;
+                border: none;
+                height: 1px;
+                background: rgba(255,255,255,0.8);
             }
             .social{
                 position: absolute;
@@ -55,10 +73,14 @@
             .social svg {
                 width: 30px;
                 height: 30px;
-                color: white;
+                fill: rgba(255, 255, 255, 0.978);
+                transition: all 0.25s ease;
+                cursor: pointer;
+                z-index: 1;
             }
             .social svg:hover{
-                cursor: pointer;
+                transform: translateY(-5px);
+                transition: 0.3s;
             }
         </style>
     </head>
@@ -85,6 +107,7 @@
                     <div class="name">
                         <h3>Randil Shehan</h3>
                     </div>
+                    <hr>
                     <div class="social">
                         <!-- GitHub -->
                         <svg viewBox="0 0 24 24">
@@ -108,6 +131,7 @@
                     <div class="name">
                         <h3>Danella De Cruz</h3>
                     </div>
+                    <hr>
                     <div class="social">
                         <!-- GitHub -->
                         <svg viewBox="0 0 24 24">
@@ -131,6 +155,7 @@
                     <div class="name">
                         <h3>Thivina Abhishek</h3>
                     </div>
+                    <hr>
                     <div class="social">
                         <!-- GitHub -->
                         <svg viewBox="0 0 24 24">
@@ -154,6 +179,7 @@
                     <div class="name">
                         <h3>Damian De Cruz</h3>
                     </div>
+                    <hr>
                     <div class="social">
                         <!-- GitHub -->
                         <svg viewBox="0 0 24 24">
