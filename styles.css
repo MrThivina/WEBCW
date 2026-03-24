@@ -101,12 +101,20 @@ footer a:hover{
 }
 
 .card{
-    background-color:rgba(137, 220, 166, 0.84);
+    background-color:rgba(214, 241, 214, 0.845);
     padding:20px;
     border-radius:10px;
     width:25%;
+    height: 560px;
 }
-
+.card img{
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+}
+.conetent-page img{
+    width: 100%;
+}
 /*GALLERY*/
 
 .gallery{
@@ -146,12 +154,19 @@ footer a:hover{
 
 }
 .conetent-page{
-    background-color: rgb(201, 227, 218);
+    background-color: rgba(201, 227, 218, 0.79);
     margin-top: 5px;
-    display: flex;
-    justify-content: center;
-    width: 25%;
-    height: 60opx;
+    width: 35%;
+    height: 300px;
     border-radius: 10px;
     padding: 20px;
+}
+
+.conetent-page h3{
+    width: 100%;
+}
+
+.conetent-page img{
+    width: 100%;
+    
 }

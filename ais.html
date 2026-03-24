@@ -205,7 +205,8 @@
 
             document.getElementById("impactScore").textContent = "Total impact score: " + totalScore;
             if(totalScore == 0){
-                document.getElementById("bar").style.backgroundColor = "rgb(179, 175, 175)";
+                document.getElementById("feedbackSummary").style.backgroundColor = "rgba(245, 255, 245)";
+                document.getElementById("bar").style.backgroundColor = "rgb(245, 255, 245)";
                 document.body.style.backgroundImage = "none";
                 document.getElementById("des").textContent = "";
 
@@ -213,16 +214,19 @@
             }else if( totalScore<=5){
                 document.getElementById("bar").style.backgroundColor = "red";
                 document.body.style.backgroundImage = "url(images/l-impact.png)";
+                document.getElementById("feedbackSummary").style.backgroundColor = "rgba(164, 224, 111, 0.473)";
                 document.getElementById("des").textContent = "Your current actions have a low impact. Try selecting more sustainable choices to better support clean energy.";
    
             }else if(totalScore<=11){
                 document.getElementById("bar").style.backgroundColor = "orange";
                 document.body.style.backgroundImage = "url(images/m-impact.png)";
+                document.getElementById("feedbackSummary").style.backgroundColor = "rgba(164, 224, 111, 0.473)";
                 document.getElementById("des").textContent = "You are making a positive difference. Your actions contribute to cleaner energy, but there is still room to improve.";        
             
             }else if(totalScore<=16){
                 document.getElementById("bar").style.backgroundColor = "green";
                 document.body.style.backgroundImage = "url(images/h-impact.png)";
+                document.getElementById("feedbackSummary").style.backgroundColor = "rgba(164, 224, 111, 0.473)";
                 document.getElementById("des").textContent = "Excellent! Your actions show a strong commitment to clean energy and sustainability. You are making a significant impact.";        
             }else{
                 document.getElementById("feedbackSummary").style.backgroundColor = "rgba(164, 224, 111, 0.473)";
