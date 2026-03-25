@@ -17,6 +17,24 @@
                 padding: 0 20px;
                 text-align: center;
             }
+            button {
+                background-color: #2C9452;
+                color: white;
+                height: 40px;
+                width: 80px;
+                border: none;
+                border-radius: 16px;
+                margin: 0 10px 10px 10px;
+                font-family: Poppins;
+                font-weight: 600;
+            }
+            button:hover {
+                cursor: pointer;
+                background-color: white;
+                color: #2C9452;
+                transition: 0.3s ease;
+                border: solid 1px #565e63;
+            }
             .outline {
                 display: flex;
                 justify-items: center;
@@ -30,6 +48,19 @@
                 border-radius: 10px;
                 width: 49.5% ;
                 height: auto;
+            }
+            .progress-container {
+                background: #565e63c4;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+            .progress-bar {
+                height: 20px;
+                width: 0%;
+                background: #2C9452;
+                text-align: center;
+                color: white;
+                font-size: 12px;
             }
         </style>
     </head>
@@ -54,29 +85,57 @@
 
         <main>
             <h1>USER PROFILE</h1>
+            <section>
+                <center>
+                    <button id="create">CREATE</button>
+                </center>
+            </section>
+
+            <br>
+            
             <section class="outline">
                 <section class="sectionCard">
                     <h3>Personal Information</h3>
+                    <center>
+                        <button id="start_personal">START</button>
+                        <button id="reset_personal">RESET</button>
+                    </center>
                 </section>
 
                 <section class="spacing"></section>
 
                 <section class="sectionCard">
                     <h3>Contact Details</h3>
+                    <center>
+                        <button id="start_contact">START</button>
+                        <button id="reset_contact">RESET</button>
+                    </center>
                 </section>
             </section>
 
             <section class="outline">
                 <section class="sectionCard">
                     <h3>Interests</h3>
+                    <center>
+                        <button id="start_interests">START</button>
+                        <button id="reset_interests">RESET</button>
+                    </center>
                 </section>
 
                 <section class="spacing"></section>
 
                 <section class="sectionCard">
                     <h3>Goals and Targets</h3>
+                    <center>
+                        <button id="start_goals">START</button>
+                        <button id="reset_goals">RESET</button>
+                    </center>
                 </section>
-            </section> 
+            </section>
+            
+            <section class="progress-container">
+                <section class="progress-bar"></section>
+            </section>
         </main>
 
         <hr>
