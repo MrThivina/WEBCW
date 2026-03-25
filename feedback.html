@@ -71,6 +71,10 @@
                 color: green;
                 font-weight: bold;
             }
+
+            p{
+                text-align: center;
+            }
             
         </style>
     </head>
@@ -165,7 +169,7 @@
                 //--->Clear previous errors
                 document.getElementById("nameError").textContent = "";
                 document.getElementById("emailError").textContent = "";
-                document.getElementById("successMsg").textContent = "";
+                document.getElementById("sMsg").textContent = "";
 
                 //--->Name validation
                 if (name === "") {
