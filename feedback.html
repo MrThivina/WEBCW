@@ -98,7 +98,6 @@
                 <textarea id="address"></textarea>
 
             </fieldset>
-            <!-- FEEDBACK DETAILS -->
             <fieldset>
                 <legend>Feedback Details</legend>
 
@@ -124,7 +123,7 @@
 
             <button type="submit">Submit</button>
 
-            <p id="successMsg" class="success"></p>
+            <p id="sMsg" class="success"></p>
 
         </form>
         <script>
@@ -167,7 +166,7 @@
 
                 // Success message
                 if (valid) {
-                    document.getElementById("successMsg").textContent = "Thank you! Your feedback has been submitted.";
+                    document.getElementById("sMsg").textContent = "Thank you! Your feedback has been submitted.";
                 }
 
             });
