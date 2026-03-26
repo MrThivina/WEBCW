@@ -26,7 +26,7 @@
             font-size: 40px;
             font-weight: 700;
         }
-        .splashContent h1,h3{
+        .splashContent h1, .splashContent h3{
             color: #377E25;
             margin-bottom: 5px;
         }
@@ -38,6 +38,7 @@
             margin: 5px 0px;
         }
 
+        /*Loader animation using CSS keyframes*/
         .loader{
             width:50px;
             height:50px;
@@ -45,7 +46,13 @@
             border-top:8px solid #356b51;
             border-radius:50%;
             margin:2px auto 5px;
-            transition: transform 1s linear;
+            animation: rotate 1s linear infinite;
+        }
+
+        /* Rotation animation */
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to  { transform: rotate(360deg); }
         }
 
         #skip{
@@ -73,6 +80,7 @@
 </head>
 
 <body>
+    <!-- Splash screen showing introduction to SDG 7 -->
     <div class="splashContent">
 
         <h1>Affordable & Clean Energy</h1>
@@ -95,34 +103,25 @@
 
     <p id="countdown">Entering site in 4...</p>
 
-    <button id="skip">Skip Intro</button>
+    <button id="skip" aria-label="Skip intro and go to home page">Skip Intro</button>
 
 
     <script>
-
-        let loader = document.querySelector(".loader");
-        let angle = 0;
-
-        setInterval(function(){
-            angle += 360;
-            loader.style.transform = "rotate(" + angle + "deg)";
-
-        },1000);
-
+        // Countdown timer for splash screen
         let time = 4;
         let countdown = document.getElementById("countdown");
 
-        setInterval(function(){
+        let timer = setInterval(function(){
             time--;
             countdown.textContent = "Entering site in "+ time +"...";
 
              if(time <= 0){
                 clearInterval(timer);
-                window.location.href = "home.html";
             }
             
         },1000);
 
+        // Skip button allowing user to head to home page immediately
         document.getElementById("skip").onclick = function(){
             window.location.href = "home.html";
         }

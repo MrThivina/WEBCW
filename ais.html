@@ -69,6 +69,10 @@
             font-weight: bold;
             color: white;    
         }
+        #impactLevel{
+            color: white;
+            text-align: center;
+        }
         .ip{
             width: 100%;
             text-align: center;
@@ -145,10 +149,11 @@
                 </div>
             </section>
 
-            <div id="feedbackSummary"><br>
+            <div id="feedbackSummary">
+                <h3 id="impactLevel"></h3>
                 <p id="impactScore">Total impact score:</p>
                 <span id="des"></span><br><br>
-                <div id="bar"></div><br>
+                <div id="bar"></div>
             </div>
 
             <section id="section2">
@@ -184,6 +189,8 @@
 
         let totalScore = 0;
 
+        // Handle selection and scoring logic
+
         function handleCardClick(event){
 
             let card = event.currentTarget;
@@ -200,35 +207,47 @@
             if(card.id == "5") points = 5;
             if(card.id == "6") points = 1;
 
-            
+            // Each card adds/removes impact points
+
             if(card.classList.contains("selected")){
                 totalScore += points;
             } else {
                 totalScore -= points;
             }
 
+            // Impact level thresholds:
+            // 1–5 points = Low impact
+            // 6–11 points = Medium impact
+            // 12–16 points = High impact
+
+            // Update feedback and background based on score
+
             document.getElementById("impactScore").textContent = "Total impact score: " + totalScore;
             if(totalScore == 0){
                 document.getElementById("feedbackSummary").style.display = "none";
                 document.querySelector(".a-cards").style.backgroundImage = "none";
+                document.getElementById("des").textContent = "";
 
 
             }else if( totalScore<=5){
                 document.getElementById("bar").style.backgroundColor = "red";
                 document.querySelector(".a-cards").style.backgroundImage = "url(images/l-impact.png)";
                 document.getElementById("feedbackSummary").style.backgroundColor = "rgba(164, 224, 111, 0.473)";
+                document.getElementById("impactLevel").textContent = "Low Impact";
                 document.getElementById("des").textContent = "Your current actions have a low impact. Try selecting more sustainable choices to better support clean energy.";
    
             }else if(totalScore<=11){
                 document.getElementById("bar").style.backgroundColor = "orange";
                 document.querySelector(".a-cards").style.backgroundImage = "url(images/m-impact.png)";
                 document.getElementById("feedbackSummary").style.backgroundColor = "rgba(164, 224, 111, 0.473)";
+                document.getElementById("impactLevel").textContent = "Medium Impact";
                 document.getElementById("des").textContent = "You are making a positive difference. Your actions contribute to cleaner energy, but there is still room to improve.";        
             
             }else if(totalScore<=16){
                 document.getElementById("bar").style.backgroundColor = "green";
                 document.querySelector(".a-cards").style.backgroundImage = "url(images/h-impact.png)";
                 document.getElementById("feedbackSummary").style.backgroundColor = "rgba(164, 224, 111, 0.473)";
+                document.getElementById("impactLevel").textContent = "High Impact";
                 document.getElementById("des").textContent = "Excellent! Your actions show a strong commitment to clean energy and sustainability. You are making a significant impact.";        
             }else{
                 document.getElementById("feedbackSummary").style.backgroundColor = "rgba(164, 224, 111, 0.473)";
