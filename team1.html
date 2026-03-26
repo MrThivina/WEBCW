@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .p-cards{
+                display: flex;
+                gap: 20px;              
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 7.5%; 
+            }
+            .p-card{
+                flex: 1 1 250px;
+                max-width: 300px;
+                height: 400px;
+                border-radius: 10px;
+                background: rgba(226, 220, 220, 0.5);
+                text-align: center;
+                padding: 20px;
+                transition: 0.3s ease;
+            }
+            .p-card:hover {
+                box-shadow: 0 0 15px rgba(0, 150, 255, 0.8);
+            }
+            .p-card img{
+                margin: 30px 0px;
+                height: 150px;
+                width: 150px;
+                object-fit: cover;
+                border-radius: 50%;
+                object-fit: cover;
+                transition: transform 0.4s ease;
+            }
+            .p-card img:hover{
+                transform: scale(1.1);
+            }
+            .p-card h4{
+                margin: 0;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="home.html"><img src="images/logo.png" alt="GoGreen logo" id="logo"></a>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="ais.html">Simulator</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="team.html" class="active">Team</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+                <a href="profile.html"><img src="images/USER_PROFILE.png" alt="user profile" id="login"></a>
+            </nav>
+        </header>
+
+        <hr>
+
+        <section class="p-cards">
+            <div class="p-card">
+                <img src="cardimages/randil.jpeg" alt="Randil">
+                <div class="about">
+                    <h4>Randil Shehan</h4>
+                    <h4>20250444</h4>
+                    <p>Student 01</p>
+                </div>
+            </div>
+            <div class="p-card">
+                <img src="cardimages/danella.jpeg" alt="Danella">
+                <div class="about">
+                    <h4>Danella De Cruz</h4>
+                    <h4>20250449</h4>
+                    <p>Student 02</p>
+                </div>
+            </div>
+            <div class="p-card">
+                <img src="#" alt="Thivina">
+                <div class="about">
+                    <h4>Thivina Abhishek</h4>
+                    <h4>20250445</h4>
+                    <p>Student 03</p>
+                </div>
+            </div>
+            <div class="p-card">
+                <img src="cardimages/damian.png" alt="Damian">
+                <div class="about">
+                    <h4>Damian De Cruz</h4>
+                    <h4>20250444</h4>
+                    <p>Student 04</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <footer>
+            <p><a href="#">page editor</a></p>
+            <p><a href="#">Validation</a></p>
+        </footer>
+    
+    </body>
+</html>
