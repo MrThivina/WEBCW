@@ -13,23 +13,172 @@
                 text-align:center;
                 color:#2e7d32;
             }
-            .gallery img{
-                width: 100%;
-                padding: 0;
-                display: inline-block;
-                border-radius: 10px;
-                cursor: pointer;
-                transition: transform 0.3s;
-    
+            
+            .gallery-head {
+            background-image: url(../../images/gallery/pexels-artempodrez-7048040.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            color: rgb(2, 2, 2);
+            font-size: large;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 3rem;
+            /* Space below hero section */
+            }
+
+            .gallery-section {
+            max-width: 1200px;
+            margin: 0 auto 4rem auto;
+            padding: 0 1rem;
             }
             
-            .modal-content {
-                background: white;
-                padding: 20px;
-                border-radius: 10px;
-                max-width: 500px;
-                text-align: center;
+
+            /*GRID LAYOUT*/
+            .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
             }
+
+            /* Individual Cell */
+            .cell {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            }
+
+            .cell img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            transition: transform 1.3s ease;
+            }
+
+            .cell:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.89);
+            transition: transform 1.3s ease;
+            }
+
+            .cell:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.89);
+            transition: transform 1.3s ease;
+            }
+
+            .cell .label {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(223, 214, 214, 0.116);
+
+            color: white;
+            font-weight: bolder;
+            font-size: 0.9rem;
+            text-align: center;
+            z-index: 2;
+            /* ensure it sits above the image */
+
+            }
+
+            /* Modal content */
+            #modalBody {
+            background: #fff;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80%;
+            padding: 20px;
+            border-radius: 12px;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+            overflow-y: auto;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+            }
+
+            #modal.active #modalBody {
+            transform: scale(1); /* pop effect */
+            }
+
+            /* Modal image */
+            #modalBody img {
+            width: 100%;
+            height: auto; /* maintain original aspect ratio */
+            border-radius: 8px;
+            display: block;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            }
+
+            /* Close button */
+            #closeBtn {
+            position: absolute;
+            top: 12px;
+            right: 15px;
+            font-size: 26px;
+            font-weight: bold;
+            cursor: pointer;
+            }
+
+            /* Gallery hover effect */
+            .cell {
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+            }
+
+            .cell:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            }
+
+            .cell img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* crops to fit box nicely */
+            transition: transform 0.3s ease;
+            }
+
+            .cell:hover img{
+                transform:scale(1.07);
+            }
+
+            #modalTitle {
+            color: black;
+            }
+            #modalDescription {
+            background-color: rgba(144, 238, 144, 0.325);
+            padding: 10px 10px;
+            border-radius: 10px;
+            }
+
+            .control-group {
+            margin: 8px 0;
+            }
+
+            .control-group label {
+            font-weight: bold;
+            margin-right: 10px;
+            }
+            .collect-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            }
+
+
+
         </style>
     </head>
 
@@ -53,46 +202,59 @@
         <main>
 
         <hr>
+        <section class="gallery-head">
         <h1>Renewable Energy Gallery</h1>
 
-        <div class="gallery">
+        <p>SDG 07 focuses on an immersive space designed to showcase the transition from fossil fuels to clean, sustainable power. 
+        It serves as both an educational hub and a vision of a greener future.</p>
+        
 
-            <img src="images/solar.jpg" alt="Solar Panels" onclick="openModal('Solar energy uses sunlight to generate electricity using solar panels. It is renewable, reduces electricity bills, and lowers carbon emissions.')">
+        <div class="gallery-grid">
+            <div class="cell"></div>
+            <img src="images/solar.jpg" alt="Solar Panels" onclick="openModal('Solar energy uses sunlight to generate electricity using solar panels. It is renewable, reduces electricity bills, and lowers carbon emissions.')"/>
+            <span class="label">Solar Panels</span>
+            </div>
 
-            <img src="images/wind.jpg" alt="Wind Turbines" onclick="openModal('Wind turbines convert wind into electricity. It is a clean and renewable source that helps reduce reliance on fossil fuels.')">
+            <div class="cell">
+            <img src="images/wind.jpg" alt="Wind Turbines" onclick="openModal('Wind turbines convert wind into electricity. It is a clean and renewable source that helps reduce reliance on fossil fuels.')"/>
+            <span class="label">Wind Turbines</span>
+            </div>
 
-            <img src="images/hydro.jpg" alt="Hydropower Plant" onclick="openModal('Hydropower generates electricity using flowing water. It is one of the oldest and most reliable renewable energy sources.')">
+            <div class="cell">
+            <img src="images/hydro.jpg" alt="Hydropower Plant" onclick="openModal('Hydropower generates electricity using flowing water. It is one of the oldest and most reliable renewable energy sources.')"/>
+            <span class="label">Hydropower Plant</span>
+            </div>
 
-            <img src="images/led.jpg" alt="Energy Efficiency" onclick="openModal('Energy efficiency means using less energy for the same tasks. Simple actions like switching off lights help reduce environmental impact.')">
+            <div class="cell">
+            <img src="images/led.jpg" alt="Energy Efficiency" onclick="openModal('Energy efficiency means using less energy for the same tasks. Simple actions like switching off lights help reduce environmental impact.')"/>
+            <span class="label">Energy Efficiency</span>
+            </div>
 
-            <img src="images/wood.jpg" alt="Biomss Energy" onclick="openModal('Biomass energy is produced from organic materials like plants and waste. It helps reduce landfill waste and produces renewable energy.')">
+            <div class="cell">
+            <img src="images/wood.jpg" alt="Biomss Energy" onclick="openModal('Biomass energy is produced from organic materials like plants and waste. It helps reduce landfill waste and produces renewable energy.')"/>
+            <span class="label">Biomss Energy</span>
+            </div>
 
-            <img src="images/charge.jpg" alt="Electric Vehicles" onclick="openModal('Electric vehicles run on electricity instead of fuel. They reduce air pollution and greenhouse gas emissions.')">
+            <div class="cell">
+            <img src="images/charge.jpg" alt="Electric Vehicles" onclick="openModal('Electric vehicles run on electricity instead of fuel. They reduce air pollution and greenhouse gas emissions.')"/>
+            <span class="label">Electric Vehicles</span>
+            </div>
 
         </div>
+        </section>
+        
+        <div id ="modal">
+            <div id="modalBody">
+                <span id="closeBtn">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <!--added using js later-->
+                <img id="modalImage" src="" alt=""/>
+                <p id="modalDescription"></p>
+            <div>
+        </div>
     </main>
-    <div class ="modal" id ="modal">
-                <div class="modal-content">
-                    <p id ="modalText"></p>
-                    <button onclick="closeModal()">close</button>
-                </div>
-            </div>
-            
-            <script>
-                //JAVASCRIPT
-                function openModal (text){
-                    document.getElementById("modalText").innerText = text;
-                    document.getElementById("modal").style.display="flex";
-
-                }
-                function closeModal(){
-                    document.getElementById("modal").style.display="none";
-
-                }
-                
-            </script>
-
-        <footer>
+    
+    <footer>
             <p><a href="#">page editor</a></p>
             <p><a href="#">Validation</a></p>
         </footer>
