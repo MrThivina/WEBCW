@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="styles.css">
     <title>AIS</title>
     <style>
-        body{
+        .a-cards{
+            width: 80%;
+            margin: 0px auto;
+            padding: 50px;
+            border-radius: 10px;
             background-size: cover;
             background-position: center;
             transition: 0.5s ease;
-        }
-        .a-cards{
-            width: 80%;
-            margin: 0 auto;
         }
         #section1, #section2{
             width: 100%;
@@ -33,13 +33,14 @@
             padding: 10px;
             margin: 10px 10px;            
         }
-        .actionCards:hover{ transform: translateY(-8px) scale(1.05); 
-            transition: transform linear 0.3s; 
+        .actionCards:hover{ 
+            transform: translateY(-8px) scale(1.0); 
+            transition: transform linear 0.1s; 
             box-shadow:0 20px 35px rgba(0,0,0,0.3); }
 
         .selected{
             background-color: rgb(48, 160, 111);
-            border: 2px solid rgba(30, 33, 32, 0.678);
+            border: 2px solid rgba(217, 226, 223, 0.678);
         }
         h2,h5{
             text-align: center;
@@ -54,14 +55,13 @@
             text-align: center;
         }
         #feedbackSummary{
+            display: none;
             background-color: rgba(164, 224, 111, 0.473);
             text-align: center;
             border-radius: 20px;
-            padding: 90px;
-            margin-top: 3%;
-            margin-left:3% ;
-            margin-right: 3%;
-            background-size: cover;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
         }
         #impactScore{
             margin-top: 0.01px;
@@ -144,6 +144,12 @@
                 </div>
             </section>
 
+            <div id="feedbackSummary"><br>
+                <p id="impactScore">Total impact score:</p>
+                <span id="des"></span><br><br>
+                <div id="bar"></div><br>
+            </div>
+
             <section id="section2">
                 <div class = "actionCards" id="4">
                     <img src="images/renew.png" alt="House powered by solar panels and renewable energy sources">
@@ -167,11 +173,7 @@
                 </div>    
             </section>
         </div>
-        <div id="feedbackSummary"><br>
-            <p id="impactScore">Total impact score:</p>
-            <span id="des"></span><br><br>
-            <div id="bar"></div><br>
-        </div>
+        
 
 
     </main>
@@ -184,6 +186,7 @@
         function handleCardClick(event){
 
             let card = event.currentTarget;
+            document.getElementById("feedbackSummary").style.display = "block";
 
             card.classList.toggle("selected");
 
@@ -205,27 +208,25 @@
 
             document.getElementById("impactScore").textContent = "Total impact score: " + totalScore;
             if(totalScore == 0){
-                document.getElementById("feedbackSummary").style.backgroundColor = "rgba(245, 255, 245)";
-                document.getElementById("bar").style.backgroundColor = "rgb(245, 255, 245)";
-                document.body.style.backgroundImage = "none";
-                document.getElementById("des").textContent = "";
+                document.getElementById("feedbackSummary").style.display = "none";
+                document.querySelector(".a-cards").style.backgroundImage = "none";
 
 
             }else if( totalScore<=5){
                 document.getElementById("bar").style.backgroundColor = "red";
-                document.body.style.backgroundImage = "url(images/l-impact.png)";
+                document.querySelector(".a-cards").style.backgroundImage = "url(images/l-impact.png)";
                 document.getElementById("feedbackSummary").style.backgroundColor = "rgba(164, 224, 111, 0.473)";
                 document.getElementById("des").textContent = "Your current actions have a low impact. Try selecting more sustainable choices to better support clean energy.";
    
             }else if(totalScore<=11){
                 document.getElementById("bar").style.backgroundColor = "orange";
-                document.body.style.backgroundImage = "url(images/m-impact.png)";
+                document.querySelector(".a-cards").style.backgroundImage = "url(images/m-impact.png)";
                 document.getElementById("feedbackSummary").style.backgroundColor = "rgba(164, 224, 111, 0.473)";
                 document.getElementById("des").textContent = "You are making a positive difference. Your actions contribute to cleaner energy, but there is still room to improve.";        
             
             }else if(totalScore<=16){
                 document.getElementById("bar").style.backgroundColor = "green";
-                document.body.style.backgroundImage = "url(images/h-impact.png)";
+                document.querySelector(".a-cards").style.backgroundImage = "url(images/h-impact.png)";
                 document.getElementById("feedbackSummary").style.backgroundColor = "rgba(164, 224, 111, 0.473)";
                 document.getElementById("des").textContent = "Excellent! Your actions show a strong commitment to clean energy and sustainability. You are making a significant impact.";        
             }else{
