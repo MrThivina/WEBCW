@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
+        <meta charset ="UTF-8">
+        <meta name ="viewport" content = "width=device-width ,initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <title>GoGreen</title>
+        <link rel="stylesheet" href="styles.css">
         <style>
-            .container {
-                display: flex;
-            }
-
-            .sidebar {
+            .sidebar{
                 width: 250px;
                 background: #e8f5e9;
                 padding: 20px;
@@ -18,71 +17,50 @@
                 position: sticky;
                 top: 0;
             }
-
-            .sidebar h3 {
-                margin-bottom: 10px;
+            .sidebar h3{
+                margin: 10px auto;
+                color: rgba(0, 123, 255, 0.555);
             }
-
-            .sidebar ul {
-                list-style: none;
-                padding: 0;
+            .sidebar ul li{
+                margin: 5px auto;
+                list-style: none;                
             }
-
-            .sidebar li {
-                margin: 10px 0;
-            }
-
-            .sidebar a {
+            .sidebar a{
                 text-decoration: none;
-                color: green;
-                font-weight: 500;
-            }
-
-            .sidebar a:hover {
-                text-decoration: underline;
-            }
-
-            .content {
-                flex: 1;
-                padding: 30px;
-            }
-
-            .content section {
-                margin-bottom: 40px;
+                color: black;
             }
         </style>
     </head>
     <body>
-
         <header>
             <nav>
                 <a href="home.html"><img src="images/logo.png" alt="GoGreen logo" id="logo"></a>
                 <ul>
-                    <li><a href="home.html" class="active">Home</a></li>
-                    <li><a href="content.html">Content</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="content.html" class="active">Content</a></li>
                     <li><a href="ais.html">Simulator</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="programs.html">Programs</a></li>
                     <li><a href="team.html">Team</a></li>
                     <li><a href="sitemap.html">Sitemap</a></li>
                 </ul>
                 <a href="profile.html"><img src="images/USER_PROFILE.png" alt="user profile" id="login"></a>
             </nav>
         </header>
-            <aside class="sidebar">
+        <hr>
+        <main>
+             <aside class="sidebar">
                 <h3>Contents</h3>
                 <ul>
-                    <li><a href="#content1">Introduction</a></li>
-                    <li><a href="#importance">Importance</a></li>
-                    <li><a href="#solutions">Solutions</a></li>
-                    <li><a href="#actions">Actions</a></li>
+                    <li><a href="content_ST1.html">Introduction</a></li>
+                    <li><a href="content_ST2.html">Importance</a></li>
+                    <li><a href="content_ST3.html">Solutions</a></li>
+                    <li><a href="content_ST4.html">Actions</a></li>
                 </ul>
             </aside>
-
+        </main>
+        <hr>
         <footer>
-
         </footer>
-
     </body>
 </html>
