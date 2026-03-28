@@ -1,66 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset ="UTF-8">
-        <meta name ="viewport" content = "width=device-width ,initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <title>GoGreen</title>
-        <link rel="stylesheet" href="styles.css">
-        <style>
-            .sidebar{
-                width: 250px;
-                background: #e8f5e9;
-                padding: 20px;
-                height: 100vh;
-                position: sticky;
-                top: 0;
-            }
-            .sidebar h3{
-                margin: 10px auto;
-                color: rgba(0, 123, 255, 0.555);
-            }
-            .sidebar ul li{
-                margin: 5px auto;
-                list-style: none;                
-            }
-            .sidebar a{
-                text-decoration: none;
-                color: black;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="home.html"><img src="images/logo.png" alt="GoGreen logo" id="logo"></a>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="content.html" class="active">Content</a></li>
-                    <li><a href="ais.html">Simulator</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="sitemap.html">Sitemap</a></li>
-                </ul>
-                <a href="profile.html"><img src="images/USER_PROFILE.png" alt="user profile" id="login"></a>
-            </nav>
-        </header>
-        <hr>
-        <main id="top">
-             <aside class="sidebar">
-                <h3>Contents</h3>
-                <ul>
-                    <li><a href="content_ST1.html">Introduction</a></li>
-                    <li><a href="content_ST2.html">Importance</a></li>
-                    <li><a href="content_ST3.html">Solutions</a></li>
-                    <li><a href="content_ST4.html">Actions</a></li>
-                </ul>
-            </aside>
-        </main>
-        <hr>
-        <footer>
-        </footer>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>GoGreen</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        .layout {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: #e8f5e9;
+            padding: 20px;
+            height: auto;
+            position: sticky;
+            top: 0;
+        }
+
+        .sidebar h3 {
+            margin: 10px 0;
+            color: #4085aa;
+        }
+
+        .sidebarList li {
+            margin: 5px 0;
+        }
+
+        .subtopics li {
+            list-style: circle;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .currentTopic {
+            font-weight: bold;
+            color: green;
+        }
+
+        .content {
+            padding: 20px;
+            flex-direction: column;
+        }
+
+        .content h1 {
+            margin-bottom: 10px;
+        }
+
+        .content h2 {
+            margin-top: 25px;
+        }
+
+        .content ul {
+            margin-left: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="home.html">
+                <img src="images/logo.png" alt="GoGreen logo" id="logo">
+            </a>
+
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="content.html" class="active">Content</a></li>
+                <li><a href="ais.html">Simulator</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
+
+            <a href="profile.html">
+                <img src="images/USER_PROFILE.png" alt="user profile" id="login">
+            </a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main id="top" class="layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>Content</h3>
+            <ul class="sidebarList">
+
+                <li>
+                    <a href="content_ST1.html">Why Clean Energy Matters Today</a>
+                    <ul class="subtopics">
+                        <li><a href="#">Subtopic1</a></li>
+                        <li><a href="#">Subtopic2</a></li>
+                        <li><a href="#">Subtopic3</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="content_ST2.html" class="currentTopic">Types of Renewable Energy</a>
+                    <ul class="subtopics">
+                        <li><a href="#intro">Introduction</a></li>
+                        <li><a href="#solar">Solar Energy</a></li>
+                        <li><a href="#wind">Wind Energy</a></li>
+                        <li><a href="#hydro">Hydropower</a></li>
+                        <li><a href="#geo">Geothermal Energy</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="content_ST3.html">Sustainable Living & Energy Saving</a>
+                    <ul class="subtopics">
+                        <li><a href="#">Subtopic1</a></li>
+                        <li><a href="#">Subtopic2</a></li>
+                        <li><a href="#">Subtopic3</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="content_ST4.html">The Future of Clean Energy</a>
+                    <ul class="subtopics">
+                        <li><a href="#">Subtopic1</a></li>
+                        <li><a href="#">Subtopic2</a></li>
+                        <li><a href="#">Subtopic3</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </aside>
+
+        <!-- Content -->
+        <section class="content">
+
+            <h1>Types of Renewable Energy</h1>
+
+            <h2 id="intro">🟢 Introduction</h2>
+            <p>
+                Renewable energy comes from natural sources that are constantly replenished, such as sunlight, wind, and water. 
+                Unlike fossil fuels, these energy sources do not run out and produce little to no harmful emissions. 
+                As the world faces climate change and rising energy demands, renewable energy is becoming essential for a sustainable future.
+            </p>
+
+            <h2 id="solar">☀️ Solar Energy</h2>
+            <p>Solar energy is one of the most widely used forms of renewable energy. It works by converting sunlight into electricity using solar panels.</p>
+
+            <p><strong>🔹 How it works:</strong></p>
+            <p>Solar panels contain photovoltaic (PV) cells that capture sunlight and turn it into usable energy.</p>
+
+            <p><strong>🔹 Benefits:</strong></p>
+            <ul>
+                <li>Clean and environmentally friendly</li>
+                <li>Reduces electricity bills</li>
+                <li>Can be used in homes and businesses</li>
+            </ul>
+
+            <p><strong>🔹 Example:</strong></p>
+            <p>Many homes now install rooftop solar panels to generate their own electricity.</p>
+
+            <h2 id="wind">🌬️ Wind Energy</h2>
+            <p>Wind energy uses the power of moving air to generate electricity through wind turbines.</p>
+
+            <p><strong>🔹 How it works:</strong></p>
+            <p>Wind spins the blades of a turbine, which turns a generator to produce electricity.</p>
+
+            <p><strong>🔹 Benefits:</strong></p>
+            <ul>
+                <li>No pollution during operation</li>
+                <li>Renewable and abundant</li>
+                <li>Suitable for large-scale energy production</li>
+            </ul>
+
+            <p><strong>🔹 Example:</strong></p>
+            <p>Wind farms are commonly found in open areas or offshore locations.</p>
+
+            <h2 id="hydro">💧 Hydropower</h2>
+            <p>Hydropower generates energy using moving water, usually from rivers or dams.</p>
+
+            <p><strong>🔹 How it works:</strong></p>
+            <p>Water flows through turbines in a dam, spinning them to produce electricity.</p>
+
+            <p><strong>🔹 Benefits:</strong></p>
+            <ul>
+                <li>Reliable and consistent energy source</li>
+                <li>Can produce large amounts of electricity</li>
+                <li>Long lifespan of power plants</li>
+            </ul>
+
+            <p><strong>🔹 Example:</strong></p>
+            <p>Large dams like hydroelectric stations supply power to entire cities.</p>
+
+            <h2 id="geo">🌋 Geothermal Energy</h2>
+            <p>Geothermal energy comes from heat stored beneath the Earth’s surface.</p>
+
+            <p><strong>🔹 How it works:</strong></p>
+            <p>Steam or hot water from underground is used to turn turbines and generate electricity.</p>
+
+            <p><strong>🔹 Benefits:</strong></p>
+            <ul>
+                <li>Constant energy supply (not weather-dependent)</li>
+                <li>Low environmental impact</li>
+                <li>Efficient and sustainable</li>
+            </ul>
+
+            <p><strong>🔹 Example:</strong></p>
+            <p>Countries like Iceland use geothermal energy for heating and electricity.</p>
+
+            <h2>🚀 The Future of Renewable Energy</h2>
+            <p>
+                Renewable energy technologies are constantly improving. Innovations such as better battery storage, smart grids, 
+                and more efficient solar panels are making clean energy more accessible and affordable. 
+                As more countries invest in renewable energy, it will play a key role in reducing global carbon emissions.
+            </p>
+
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><a href="#">page editor</a></p>
+        <p><a href="#">Validation</a></p>
+    </footer>
+
+</body>
 </html>
