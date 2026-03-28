@@ -58,10 +58,19 @@
 
         .content h2 {
             margin-top: 25px;
+            text-align: left;
         }
 
         .content ul {
             margin-left: 20px;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            align-items: center;
+        }
+        .content p{
+            margin: 0;
         }
 
     </style>
@@ -69,27 +78,32 @@
 
 <body>
 
-    <header>
-        <nav>
-            <a href="home.html">
-                <img src="images/logo.png" alt="GoGreen logo" id="logo">
-            </a>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <section class="headerOutline">
+                    <section class="borderlogo">
+                        <a href="home.html"><img src="images/logo.png" alt="GoGreen logo" id="logo"></a>
+                    </section>
 
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="content.html" class="active">Content</a></li>
-                <li><a href="ais.html">Simulator</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
-            </ul>
-
-            <a href="profile.html">
-                <img src="images/USER_PROFILE.png" alt="user profile" id="login">
-            </a>
-        </nav>
-    </header>
+                    <section class="navbar">
+                        <ul>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="content.html"  class="active">Content</a></li>
+                            <li><a href="ais.html">Simulator</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="feedback.html">Feedback</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="sitemap.html">Sitemap</a></li>
+                        </ul>
+                    </section>
+                    <section class="borderlogo">
+                        <a href="profile.html"><img src="images/USER_PROFILE.png" alt="user profile" id="login"></a>
+                    </section>
+                </section>
+            </nav>
+        </header>
 
     <hr>
 
@@ -112,7 +126,6 @@
                 <li>
                     <a href="content_ST2.html" class="currentTopic">Types of Renewable Energy</a>
                     <ul class="subtopics">
-                        <li><a href="#intro">Introduction</a></li>
                         <li><a href="#solar">Solar Energy</a></li>
                         <li><a href="#wind">Wind Energy</a></li>
                         <li><a href="#hydro">Hydropower</a></li>
@@ -145,84 +158,63 @@
         <section class="content">
 
             <h1>Types of Renewable Energy</h1>
-
-            <h2 id="intro">🟢 Introduction</h2>
             <p>
-                Renewable energy comes from natural sources that are constantly replenished, such as sunlight, wind, and water. 
-                Unlike fossil fuels, these energy sources do not run out and produce little to no harmful emissions. 
-                As the world faces climate change and rising energy demands, renewable energy is becoming essential for a sustainable future.
+                Renewable energy comes from natural sources such as sunlight, wind, water, and heat from the Earth. These sources are constantly replenished and produce little to no carbon emissions. As the demand for energy increases, renewable energy is becoming essential for reducing environmental damage and building a sustainable future.
             </p>
 
-            <h2 id="solar">☀️ Solar Energy</h2>
-            <p>Solar energy is one of the most widely used forms of renewable energy. It works by converting sunlight into electricity using solar panels.</p>
+            <h2 id="solar"><strong>Solar Energy</strong></h2>
+            <p>Solar energy is one of the most widely used renewable energy sources and relies on sunlight to produce electricity. It is commonly used in homes, businesses, and even large solar farms.</p>
+            <p>Solar panels capture sunlight and convert it into electricity, making it a practical and accessible energy solution. Although its efficiency depends on weather conditions, advancements in technology are making solar energy more reliable and affordable.</p>
 
-            <p><strong>🔹 How it works:</strong></p>
-            <p>Solar panels contain photovoltaic (PV) cells that capture sunlight and turn it into usable energy.</p>
-
-            <p><strong>🔹 Benefits:</strong></p>
+            <p><strong>Benefits:</strong></p>
             <ul>
-                <li>Clean and environmentally friendly</li>
-                <li>Reduces electricity bills</li>
+                <li>Clean and environmentally friendly.</li>
+                <li>Reduces electricity costs.</li>
                 <li>Can be used in homes and businesses</li>
             </ul>
+            <img src="images/SolarEnergy.jpg" alt="Solar Panel closeup">
 
-            <p><strong>🔹 Example:</strong></p>
-            <p>Many homes now install rooftop solar panels to generate their own electricity.</p>
-
-            <h2 id="wind">🌬️ Wind Energy</h2>
-            <p>Wind energy uses the power of moving air to generate electricity through wind turbines.</p>
-
-            <p><strong>🔹 How it works:</strong></p>
-            <p>Wind spins the blades of a turbine, which turns a generator to produce electricity.</p>
-
-            <p><strong>🔹 Benefits:</strong></p>
+            <h2 id="wind"><strong>Wind Energy</strong></h2>
+            <p>Wind energy uses the movement of air to generate electricity and is one of the leading renewable energy sources worldwide. Wind turbines are often placed in open areas or offshore where wind speeds are stronger.</p>
+            <p>As wind turns the turbine blades, electricity is generated and supplied to the grid. Modern wind farms are becoming more efficient, with larger turbines producing more energy than ever before.</p>
+            
+            <p><strong>Benefits:</strong></p>
             <ul>
                 <li>No pollution during operation</li>
                 <li>Renewable and abundant</li>
                 <li>Suitable for large-scale energy production</li>
             </ul>
+            <img src="images/WindEnergy.jpg" alt="Wind Turbines on the Field">
 
-            <p><strong>🔹 Example:</strong></p>
-            <p>Wind farms are commonly found in open areas or offshore locations.</p>
-
-            <h2 id="hydro">💧 Hydropower</h2>
-            <p>Hydropower generates energy using moving water, usually from rivers or dams.</p>
-
-            <p><strong>🔹 How it works:</strong></p>
-            <p>Water flows through turbines in a dam, spinning them to produce electricity.</p>
-
-            <p><strong>🔹 Benefits:</strong></p>
+            <h2 id="hydro"><strong>Hydropower</strong></h2>
+            <p>Hydropower generates electricity using flowing or falling water, usually from rivers or dams. It is one of the oldest and most reliable forms of renewable energy.</p>
+            <p>Water moves through turbines to generate electricity, providing a steady and consistent energy supply. Hydropower can produce large amounts of energy, but it may also impact surrounding ecosystems.</p>
+            
+            <p><strong>Benefits:</strong></p>
             <ul>
                 <li>Reliable and consistent energy source</li>
                 <li>Can produce large amounts of electricity</li>
-                <li>Long lifespan of power plants</li>
+                <li>Long lasting infrastructure</li>
             </ul>
+            <img src="images/Hydropower.jpg" alt="Gray Dam Under Blue Sky">
 
-            <p><strong>🔹 Example:</strong></p>
-            <p>Large dams like hydroelectric stations supply power to entire cities.</p>
-
-            <h2 id="geo">🌋 Geothermal Energy</h2>
-            <p>Geothermal energy comes from heat stored beneath the Earth’s surface.</p>
-
-            <p><strong>🔹 How it works:</strong></p>
-            <p>Steam or hot water from underground is used to turn turbines and generate electricity.</p>
-
-            <p><strong>🔹 Benefits:</strong></p>
+            
+            <h2 id="geo"><strong>Geothermal Energy</strong></h2>
+            <p>Geothermal energy comes from heat stored beneath the Earth’s surface and is used for both electricity generation and heating.</p>
+            <p>Hot water or steam from underground is brought to the surface and used to produce energy. This type of energy is highly efficient and operates continuously, but it is limited to certain geographic locations.</p>
+            
+            <p><strong>Benefits:</strong></p>
             <ul>
-                <li>Constant energy supply (not weather-dependent)</li>
+                <li>Constant energy supply (not weather dependent)</li>
                 <li>Low environmental impact</li>
                 <li>Efficient and sustainable</li>
             </ul>
+            <img src="images/GeoThermal.jpg" alt="Geothermal Hot Springs in Icelandic Terrain">
 
-            <p><strong>🔹 Example:</strong></p>
-            <p>Countries like Iceland use geothermal energy for heating and electricity.</p>
+            
+            <p>Renewable energy sources such as solar, wind, hydropower, and geothermal are essential for creating a more sustainable future. Unlike fossil fuels, they produce little to no harmful emissions and help reduce the impact of climate change.</p>
 
-            <h2>🚀 The Future of Renewable Energy</h2>
-            <p>
-                Renewable energy technologies are constantly improving. Innovations such as better battery storage, smart grids, 
-                and more efficient solar panels are making clean energy more accessible and affordable. 
-                As more countries invest in renewable energy, it will play a key role in reducing global carbon emissions.
-            </p>
+            <p>Although each type of renewable energy has its own limitations, ongoing technological advancements are making them more efficient and accessible. By increasing the use of renewable energy in everyday life, individuals and communities can play an important role in protecting the environment and supporting long-term energy sustainability.</p>
 
         </section>
 
@@ -231,8 +223,8 @@
     <hr>
 
     <footer>
-        <p><a href="#">page editor</a></p>
-        <p><a href="#">Validation</a></p>
+        <p><a href="pageEditor_ST2.html#content">page editor</a></p>
+        <p><a href="validation_ST2.html#contentVal">Validation</a></p>
     </footer>
 
 </body>
