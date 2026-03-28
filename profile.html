@@ -69,7 +69,7 @@
             }
         </style>
     </head>
-    
+
     <body>
         <header>
            <nav>
@@ -100,7 +100,7 @@
 
         <main id="top">
             <h1>USER PROFILE</h1>
-            <section>
+            <section id="status">
                 <center>
                     <button onclick="createUser()" id="user_button">CREATE</button>
                 </center>
@@ -517,7 +517,7 @@
                 let percentage = (progress / 12) * 100 ;
                 document.getElementById("progress-bar").style.width = percentage.toFixed(2) + "%" ;
                 document.getElementById("progress-bar").innerText = percentage.toFixed(2) + "%" ;
-                
+
                 if (name || dob || username || mobile || email || address || aspects || activities || practice || public_changes || personal_goals || measurable_targets) {
                     document.getElementById("user_button").textContent = "CONTINUE" ;
                 } else {
