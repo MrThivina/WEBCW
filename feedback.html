@@ -32,9 +32,10 @@
                 overflow-y: auto;
                 margin: 10px auto 50px;
             }
-            .programsec1,.programsec2{
+            .sec1, .sec2{
                 width: 100%;
                 display: flex;
+                justify-content: center;
             }
             .program{
                 position: relative;
@@ -89,54 +90,65 @@
                 transform: scale(1.05);
                 cursor: pointer;
             }
-            
+
             .r-cards{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 20px;
-                width: 100%;
-                height: auto;
+                margin: 80px 5px;
                 padding: 20px;
-                background-color: rgb(118, 128, 128);
+                background-color: #ccc;
+                height: auto;
             }
 
             .review{
-                width: 250px;
-                border-top: 50px;
-                padding: 15px;
-                border-radius: 12px;
-                background-color: #ffffff;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-                text-align: center;
-                transition: transform 0.3s ease;
-            }
-
-            .review:hover{
-                transform: translateY(-5px);
+                width: 30%;
+                background-color: rgb(74, 128, 175);
+                border-radius: 10px;
+                margin: 10px 10px;
+                padding: 10px;
             }
 
             .review h1{
-                margin: 10px 0;
-                color: green;
+                margin: 5px 0px 5px 10px;
             }
 
-            .review h3{
-                font-size: 14px;
-                font-weight: normal;
-                line-height: 1.5;
+            .sec2 .review{
+                width: 94.5%;
+                margin: 10px 10px;
+            }
+            
+            .overall{
+                width: 30%;
+                border-radius: 10px;
+                margin: 10px;
             }
 
-            .review a{
-                display: inline-block;
-                margin: 10px 0;
-                color: green;
-                font-weight: bold;
+            .overall h1,
+            .overall h3,
+            .overall h4,
+            .overall button{
+                margin: 5px 0px 5px 50px;
             }
 
-            .p-data{
-                font-size: 13px;
-                color: #555;
+            .overall h1{
+                font-size: 100px;
+                color: #37883d;
+            }
+
+            .overall h3{
+                font-weight: 200;
+            }
+
+            .overall h4{
+                font-weight: 300;
+            }
+
+            .overall button{
+                font-size: 30px;
+                background: green;
+                color: white;
+                border: none;
+                padding: 10px;
+                border-radius: 50px;
+                cursor: pointer;
             }
 
             form {
@@ -179,7 +191,7 @@
                 margin-top: 0;
             }
 
-            button {
+            form button {
                 background: green;
                 color: white;
                 border: none;
@@ -188,7 +200,7 @@
                 cursor: pointer;
             }
 
-            button:hover {
+            form button:hover {
                 background: darkgreen;
             }
 
@@ -228,6 +240,8 @@
         <hr>
         <main id="top">
 
+            <!--Program Cards-->
+
             <div id="filtar">
                 <label for="filta">Filter:</label>
                 <select id="filta">
@@ -237,7 +251,7 @@
                 </select>
             </div>
             <div id="programs">
-                <section class="programsec1">
+                <section class="sec1">
                     <div class="program">
                         <img src="images/program1.jpg" alt="solar">
                         <h2>Solar Energy Awareness Workshop</h2>
@@ -259,7 +273,7 @@
                         </ul>
                     </div>
                 </section>
-                <section class="programsec2">
+                <section class="sec2">
                     <div class="program">
                         <img src="images/program3.png" alt="transport">
                         <h2>Green Transport Campaign</h2>
@@ -282,44 +296,50 @@
                     </div>
                 </section>
             </div>
+
+            <!--Review Cards-->
+
             <div class="r-cards">
-                <div class="review">
-                    <h1>8.5/10</h1><br>
-                    <h3>This platform is really helpful for finding ways to get involved in clean energy initiatives. The information is clear and easy to follow, and I especially liked how the programs are explained with practical examples. It motivated me to start making small changes in my daily life.</h3>
-                    <a href="#">seemore</a>
-                    <div class="p-data">
-                        <p>Name : Sam Curren</p>
-                        <p>Date : 2025.01.23</p>
+                <section class="sec1">
+                    <div class="overall">
+                        <h1>9.5/10</h1>
+                        <h3>Exceptional</h3>
+                        <h4>911 reviews</h4>
+                        <button>See All Reviews</button>
                     </div>
-                </div>
-                <div class="review">
-                    <h1>9.2/10</h1><br>
-                    <h3>The website is well designed and easy to navigate. I found several interesting programs, although I think some sections could include more detailed information about how to join. Overall, it’s a great starting point for students who want to contribute to sustainability.</h3>
-                    <a href="#">seemore</a>
-                    <div class="p-data">
-                        <p>Name : Josh English</p>
-                        <p>Date : 2025.02.28</p>
-                    </div>  
-                </div>
-                <div class="review">
-                    <h1>9.5/10</h1><br>
-                    <h3>There are some really good ideas and initiatives presented here, but the layout could be improved slightly to make everything easier to find. The content itself is useful and relevant, especially for students looking to take action on energy consumption.</h3>
-                    <a href="#">seemore</a>
-                    <div class="p-data">
-                        <p>Name : Ben Stocks</p>
-                        <p>Date : 2025.03.25</p>
-                    </div> 
-                </div>
-                <div class="review">
-                    <h1>9.9/10</h1><br>
-                    <h3>I like how the site focuses on real actions rather than just explaining the problem. It’s simple, informative, and encourages users to be more environmentally responsible.</h3>
-                    <a href="#">seemore</a>
-                    <div class="p-data">
-                        <p>Name : Ab Divilias</p>
-                        <p>Date : 2025.05.05</p>
+                    <div class="review">
+                        <h1>9.5/10</h1><br>
+                        <h3>There are some really good ideas and initiatives presented here, but the layout could be improved slightly to make everything easier to find. The content itself is useful and relevant, especially for students looking to take action on energy consumption.</h3>
+                        <a href="#">seemore</a>
+                        <div class="p-data">
+                            <p>Name : Ben Stocks</p>
+                            <p>Date : 2025.03.25</p>
+                        </div> 
                     </div>
-                </div>
+                    <div class="review">
+                        <h1>9.9/10</h1><br>
+                        <h3>I like how the site focuses on real actions rather than just explaining the problem. It’s simple, informative, and encourages users to be more environmentally responsible.</h3>
+                        <a href="#">seemore</a>
+                        <div class="p-data">
+                            <p>Name : Ab Divilias</p>
+                            <p>Date : 2025.05.05</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="sec2">
+                    <div class="review">
+                        <h1>8.5/10</h1><br>
+                        <h3>This platform is really helpful for finding ways to get involved in clean energy initiatives. The information is clear and easy to follow, and I especially liked how the programs are explained with practical examples. It motivated me to start making small changes in my daily life.</h3>
+                        <a href="#">seemore</a>
+                        <div class="p-data">
+                            <p>Name : Sam Curren</p>
+                            <p>Date : 2025.01.23</p>
+                        </div>
+                    </div>
+                </section>
             </div>
+
+            <!--Feedback Form-->
 
             <form id="feedback" method="post">
                 <fieldset>
@@ -408,6 +428,9 @@
                 //--->Success message
                 if (valid) {
                     document.getElementById("sMsg").textContent = "Thank you! Your feedback has been submitted.";
+
+                    document.getElementById("feedback").reset();
+
                 }
 
             });
