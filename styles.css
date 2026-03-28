@@ -19,8 +19,7 @@ hr{
 #logo{
     width: 120px;
     height: 80px;
-    margin: 0px;
-    
+    margin: 0px;   
 }
 
 #login{
@@ -115,18 +114,11 @@ footer a:hover{
     margin-top: 5px;
     width: 100%;
 }
+/*GALLERY*/
 
-/* Images */
-img {
-max-width: 100%;
-height: auto;
-display: block;
-}
 
-.content-image {
-border-radius: 8px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-margin: var(--spacing-md) 0;
+.gallery img:hover{
+    transform:scale(1.05);
 }
 
 /*MODAL*/
@@ -189,5 +181,4 @@ margin: var(--spacing-md) 0;
     border-radius: 10px;
     justify-content: center;
     padding: 5px;
-
 }
