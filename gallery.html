@@ -31,17 +31,18 @@
             }
 
             .gallery-section {
-                max-width: 1200px;
-                margin: 0 auto 4rem auto;
-                padding: 0 1rem;
+                width: 100%;
+                margin: 0;
+                padding: 0 10px;
             }
             
 
             /*GRID LAYOUT*/
             .gallery-grid {
                 display: grid;
-                grid-template-columns: repeat(2,1fr);
-                gap:20px;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap:15px;
+                width:100%;
             }
 
             /* Individual Cell */
@@ -55,8 +56,8 @@
 
             .cell img {
                 display: block;
-                width: 250px;
-                height: 250px;
+                width: 100%;
+                height: 200px;
                 aspect-ratio: 1 / 1;
                 object-fit: cover;
                 transition: transform 1.3s ease;
@@ -186,34 +187,34 @@
         
 
         <div class="gallery-grid">
-            <div class="cell"></div>
-            <img src="images/solar.jpg" alt="Solar Panels" onclick="openModal('Solar energy uses sunlight to generate electricity using solar panels. It is renewable, reduces electricity bills, and lowers carbon emissions.')"/>
-            <span class="label">Solar Panels</span>
+            <div class="cell">
+                <img src="images/solar.jpg" alt="Solar Panels" onclick="openModal('Solar energy uses sunlight to generate electricity using solar panels. It is renewable, reduces electricity bills, and lowers carbon emissions.')"/>
+                <span class="label">Solar Panels</span>
             </div>
 
             <div class="cell">
-            <img src="images/wind.jpg" alt="Wind Turbines" onclick="openModal('Wind turbines convert wind into electricity. It is a clean and renewable source that helps reduce reliance on fossil fuels.')"/>
-            <span class="label">Wind Turbines</span>
+                <img src="images/wind.jpg" alt="Wind Turbines" onclick="openModal('Wind turbines convert wind into electricity. It is a clean and renewable source that helps reduce reliance on fossil fuels.')"/>
+                <span class="label">Wind Turbines</span>
             </div>
 
             <div class="cell">
-            <img src="images/hydro.jpg" alt="Hydropower Plant" onclick="openModal('Hydropower generates electricity using flowing water. It is one of the oldest and most reliable renewable energy sources.')"/>
-            <span class="label">Hydropower Plant</span>
+                <img src="images/hydro.jpg" alt="Hydropower Plant" onclick="openModal('Hydropower generates electricity using flowing water. It is one of the oldest and most reliable renewable energy sources.')"/>
+                <span class="label">Hydropower Plant</span>
             </div>
 
             <div class="cell">
-            <img src="images/led.jpg" alt="Energy Efficiency" onclick="openModal('Energy efficiency means using less energy for the same tasks. Simple actions like switching off lights help reduce environmental impact.')"/>
-            <span class="label">Energy Efficiency</span>
+                <img src="images/led.jpg" alt="Energy Efficiency" onclick="openModal('Energy efficiency means using less energy for the same tasks. Simple actions like switching off lights help reduce environmental impact.')"/>
+                <span class="label">Energy Efficiency</span>
             </div>
 
             <div class="cell">
-            <img src="images/wood.jpg" alt="Biomss Energy" onclick="openModal('Biomass energy is produced from organic materials like plants and waste. It helps reduce landfill waste and produces renewable energy.')"/>
-            <span class="label">Biomss Energy</span>
+                <img src="images/wood.jpg" alt="Biomss Energy" onclick="openModal('Biomass energy is produced from organic materials like plants and waste. It helps reduce landfill waste and produces renewable energy.')"/>
+                <span class="label">Biomss Energy</span>
             </div>
 
             <div class="cell">
-            <img src="images/charge.jpg" alt="Electric Vehicles" onclick="openModal('Electric vehicles run on electricity instead of fuel. They reduce air pollution and greenhouse gas emissions.')"/>
-            <span class="label">Electric Vehicles</span>
+                <img src="images/charge.jpg" alt="Electric Vehicles" onclick="openModal('Electric vehicles run on electricity instead of fuel. They reduce air pollution and greenhouse gas emissions.')"/>
+                <span class="label">Electric Vehicles</span>
             </div>
 
         </div>
