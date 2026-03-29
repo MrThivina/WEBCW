@@ -42,13 +42,13 @@
                 background-color: rgb(48, 160, 111);
                 border: 2px solid rgba(217, 226, 223, 0.678);
             }
-            h2,h5{
+            main h2,h4{
                 text-align: center;
             }
-            h3{
+            main h3{
                 text-align: left;
             }
-            p{
+            main p{
                 text-align: justify;
             }
             #description{
@@ -128,7 +128,7 @@
             </nav> 
         </header>
 
-            <hr>
+        <hr>
             
         <main>
             <h2>Action Impact Simulator</h2>
@@ -138,7 +138,7 @@
                     <div class = "actionCards" id="1" >
                         <img src="images/LED.png" alt = "LED light bulb replacing traditional bulb to save energy"><br>
                         <h3>Switch to LED Lighting</h3><br>
-                        <p>LEDs use significantly less energy and last longer than traditional bulbs reducing electricity consumption and carbon emissions. </p>
+                        <p>LEDs use significantly less energy and last longer than traditional bulbs, reducing electricity consumption and carbon emissions. </p>
                         <h4 class="ip">Impact Points: 2</h4>
                     </div>
 
@@ -175,7 +175,7 @@
                     <div class = "actionCards" id="5">
                         <img src="images/solar.png" alt="Solar panels installed on a house generating clean energy">
                         <h3>Install Solar Panels</h3><br>
-                        <p>Solar energy provides a long-term  solution that can significantly reduce household carbon emissions.</p>
+                        <p>Solar energy provides a long-term solution that can significantly reduce household carbon emissions.</p>
                         <h4 class="ip">Impact Points: 5</h4>
                     </div>
 
@@ -202,8 +202,6 @@
             function handleCardClick(event){
 
                 let card = event.currentTarget;
-                document.getElementById("feedbackSummary").style.display = "block";
-
                 card.classList.toggle("selected");
 
                 let points = 0;
@@ -231,35 +229,42 @@
                 // Update feedback and background based on score
 
                 document.getElementById("impactScore").textContent = "Total impact score: " + totalScore;
+
+                let summary = document.getElementById("feedbackSummary");
+                let bar = document.getElementById("bar");
+                let feedbackDesc = document.getElementById("feedbackDes");
+                let level = document.getElementById("impactLevel");
+                let container = document.querySelector(".cardsContainer");
+
                 if(totalScore == 0){
-                    document.getElementById("feedbackSummary").style.display = "none";
-                    document.querySelector(".cardsContainer").style.backgroundImage = "none";
-                    document.getElementById("feedbackDes").textContent = "";
-
-
-                }else if( totalScore<=5){
-                    document.getElementById("bar").style.backgroundColor = "red";
-                    document.querySelector(".cardsContainer").style.backgroundImage = "url(images/l-impact.png)";
-                    document.getElementById("feedbackSummary").style.backgroundColor = "rgba(164, 224, 111, 0.473)";
-                    document.getElementById("impactLevel").textContent = "Low Impact";
-                    document.getElementById("feedbackDes").textContent = "Your current actions have a low impact. Try selecting more sustainable choices to better support clean energy.";
-    
-                }else if(totalScore<=11){
-                    document.getElementById("bar").style.backgroundColor = "orange";
-                    document.querySelector(".cardsContainer").style.backgroundImage = "url(images/m-impact.png)";
-                    document.getElementById("feedbackSummary").style.backgroundColor = "rgba(164, 224, 111, 0.473)";
-                    document.getElementById("impactLevel").textContent = "Medium Impact";
-                    document.getElementById("feedbackDes").textContent = "You are making a positive difference. Your actions contribute to cleaner energy, but there is still room to improve.";        
-                
-                }else if(totalScore<=16){
-                    document.getElementById("bar").style.backgroundColor = "green";
-                    document.querySelector(".cardsContainer").style.backgroundImage = "url(images/h-impact.png)";
-                    document.getElementById("feedbackSummary").style.backgroundColor = "rgba(164, 224, 111, 0.473)";
-                    document.getElementById("impactLevel").textContent = "High Impact";
-                    document.getElementById("feedbackDes").textContent = "Excellent! Your actions show a strong commitment to clean energy and sustainability. You are making a significant impact.";        
+                    summary.style.display = "none";
+                    feedbackDesc.textContent = "";
+                    level.textContent = "";
+                    container.style.backgroundImage = "none";
+                    
                 }else{
-                    document.getElementById("feedbackSummary").style.backgroundColor = "rgba(164, 224, 111, 0.473)";
+                    summary.style.display = "block";
+
+                    if( totalScore<=5){
+                        bar.style.backgroundColor = "red";
+                        feedbackDesc.textContent = "Your current actions have a low impact. Try selecting more sustainable choices to better support clean energy.";
+                        level.textContent = "Low Impact";
+                        container.style.backgroundImage = "url(images/l-impact.png)";
+        
+                    }else if(totalScore<=11){
+                        bar.style.backgroundColor = "orange";
+                        feedbackDesc.textContent = "You are making a positive difference. Your actions contribute to cleaner energy, but there is still room to improve.";        
+                        level.textContent = "Medium Impact";
+                        container.style.backgroundImage = "url(images/m-impact.png)";
+                    
+                    }else{
+                        bar.style.backgroundColor = "green";
+                        feedbackDesc.textContent = "Excellent! Your actions show a strong commitment to clean energy and sustainability. You are making a significant impact.";        
+                        level.textContent = "High Impact";
+                        container.style.backgroundImage = "url(images/h-impact.png)";
+                    }
                 }
+                
             }
 
             actionCards.forEach(card => {
@@ -267,6 +272,7 @@
             });
 
         </script>
+        <br>
         <hr>
         <footer>
             <div>
