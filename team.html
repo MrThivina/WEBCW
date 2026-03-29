@@ -368,7 +368,7 @@
 
                         details.classList.toggle("show");
 
-                        // disable icons
+                        //--> Makes Icons Disable
                         const icons = card.querySelector(".social");
                         icons.style.pointerEvents = details.classList.contains("show") ? "none" : "auto";
 
@@ -379,11 +379,13 @@
 
                     document.querySelectorAll(".student").forEach(card => {
                         const details = card.querySelector(".details");
-                        const button = card.querySelector(".toggle");
+                        const icons = card.querySelector(".social");
 
-                        // if click is NOT inside card → close
                         if (!card.contains(e.target)) {
                             details.classList.remove("show");
+
+                            //--> Makes Icons Enable Again
+                            icons.style.pointerEvents = "auto";
                         }
                     });
 
