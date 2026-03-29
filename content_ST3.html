@@ -9,12 +9,14 @@
         <title>GoGreen</title>
         <link rel="stylesheet" href="styles.css">
         <style>
+            .layout{
+                display: flex;
+            }
             .sidebar{
                 width: 250px;
                 height: auto;
                 background: #e8f5e9;
-                padding: 20px;
-                height: 100vh;
+                padding: 10px;
                 position: sticky;
                 top: 0;
             }
@@ -35,6 +37,10 @@
             }
             .currentTopic{
                 font-weight: bold;
+            }
+            .content {
+                padding: 20px;
+                flex-direction: column;
             }
             button {
                 position: fixed;
@@ -78,7 +84,7 @@
             </nav>
         </header>
         <hr>
-        <main id="top">
+        <main id="top" class="layout">
              <aside class="sidebar">
                 <h3>Content</h3>
                 <ul class="sidebarList">
@@ -104,9 +110,10 @@
                     <li>
                         <a href="content_ST3.html" class="currentTopic">Sustainable Living & Energy Saving</a>
                         <ul class="subtopics">
-                            <li><a href="#">Subtopic1</a></li>
-                            <li><a href="#">Subtopic2</a></li>
-                            <li><a href="#">Subtopic3</a></li>
+                            <li><a href="#">Efficient Energy Use at Home</a></li>
+                            <li><a href="#">Renewable Energy Sources</a></li>
+                            <li><a href="#">Sustainable Transportation Choices</a></li>
+                            <li><a href="#">Reducing Waste and Conserving Resources</a></li>
                         </ul>
                     </li>
 
@@ -120,6 +127,27 @@
                     </li>
                 </ul>
             </aside>
+            <section class="content">
+                <h1>Sustainable Living & Energy Saving</h1>
+                <p>Sustainable living is a lifestyle that aims to reduce an individual’s or society’s use of the Earth’s natural resources. As global environmental challenges such as climate change, pollution, and resource depletion continue to rise, adopting sustainable practices has become more important than ever. One of the most impactful aspects of sustainable living is energy saving, which not only conserves valuable resources but also reduces carbon emissions and lowers utility costs. By making conscious choices in our daily lives, we can contribute to a healthier planet while improving our own quality of life.</p>
+                <h2>Efficient Energy Use at Home</h2>
+
+                <p>One of the simplest ways to practice sustainable living is by improving energy efficiency at home. This includes using energy-efficient appliances, LED lighting, and smart home systems that regulate electricity consumption. Turning off lights, unplugging unused devices, and using natural lighting during the day can significantly reduce energy waste. Insulating homes properly also helps maintain indoor temperatures, reducing the need for excessive heating or cooling. Small behavioral changes, when practiced consistently, can lead to substantial energy savings over time.</p>
+
+                <h2>Renewable Energy Sources</h2>
+
+                <p>Switching to renewable energy is a major step toward sustainability. Unlike fossil fuels, renewable energy sources such as solar, wind, and hydropower are clean and virtually inexhaustible. Installing solar panels, for example, allows households to generate their own electricity while reducing dependence on non-renewable energy. Governments and organizations around the world are also encouraging the use of renewable energy through incentives and policies. By embracing these alternatives, individuals can play a crucial role in reducing greenhouse gas emissions.</p>
+
+                <h2>Sustainable Transportation Choices</h2>
+
+                <p>Transportation is a significant contributor to global energy consumption and pollution. Choosing sustainable transportation options can greatly reduce one’s environmental impact. Walking, cycling, carpooling, and using public transport are effective ways to save energy and reduce emissions. Electric vehicles (EVs) are also becoming increasingly popular as they use less energy and produce fewer emissions compared to traditional fuel-powered cars. Making mindful transportation choices not only benefits the environment but also promotes healthier lifestyles.</p>
+
+                <h2>Reducing Waste and Conserving Resources</h2>
+
+                <p>Energy saving is closely linked to reducing waste and conserving resources. Producing goods requires energy, so minimizing waste helps lower overall energy demand. Recycling, reusing materials, and avoiding single-use products are practical ways to conserve resources. Additionally, conserving water—another energy-intensive resource—through simple actions like fixing leaks and using water-efficient fixtures can make a big difference. Adopting a “reduce, reuse, recycle” mindset supports a more sustainable and energy-efficient way of living.</p>
+
+                <p>In conclusion, sustainable living and energy saving are essential for protecting the environment and ensuring a better future for generations to come. By making informed choices in how we use energy, travel, and consume resources, we can significantly reduce our ecological footprint. Every small action counts, and together, these efforts can lead to meaningful change on a global scale.</p>
+            </section>
         </main>
         <hr>
         <button><a href="#top">Go to top</a></button>
