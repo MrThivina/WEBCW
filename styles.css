@@ -28,7 +28,6 @@ hr{
     border-radius: 100%;
     width: 60px;
     height: 60px;
-    margin-top: 20px;
 }
 
 nav ul{
@@ -61,17 +60,18 @@ nav ul li a:hover{
 .headerOutline {
  display: flex;
  justify-items: center;
+ align-items: center;
 }
 
 .borderlogo {
     width: 10%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .navbar {
     width: 80%;
     text-align: center;
-    padding-top: 20px;
 }
 
 footer{
