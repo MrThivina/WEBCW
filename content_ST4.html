@@ -13,7 +13,7 @@
                 display: flex;
             }
             .sidebar{
-                width: 30%;
+                width: 20%;
                 height: auto;
                 background: #e8f5e9;
                 padding: 10px;
@@ -41,22 +41,8 @@
             }
             .content {
                 padding: 20px;
-                width: 70%;
+                width: 80%;
                 flex-direction: column;
-            }
-            button {
-                position: fixed;
-                bottom: 5%;
-                right: 5%;
-                background-color: rgb(39, 118, 188);
-                border: none;
-                padding: 10px;
-                border-radius: 15px;
-            }
-            button a{
-                text-decoration: none;
-                color: white;
-                font-weight: bold;
             }
         </style>
     </head>
@@ -86,8 +72,8 @@
             </nav>
         </header>
         <hr>
-        <main id="top">
-             <aside class="sidebar">
+        <main id="top">            
+            <aside class="sidebar">
                 <h3>Content</h3>
                 <ul class="sidebarList">
                     <li>
@@ -128,9 +114,12 @@
                     </li>
                 </ul>
             </aside>
+            <section class="content">
+                <h1>Potato</h1>
+            </section>
         </main>
         <hr>
-        <button><a href="#top">Go to top</a></button>
+        <p id="backtotop"><a href="#top">Back to top</a></p>
         <footer>
             <div>
                 <p class="footerheading">Page Author</p>
