@@ -9,14 +9,17 @@
         <title>GoGreen</title>
         <link rel="stylesheet" href="css/styles.css">
         <style>
+            .layout{
+                display: flex;
+            }
             .sidebar{
-                width: 250px;
+                width: 30%;
                 height: auto;
                 background: #e8f5e9;
-                padding: 20px;
-                height: 100vh;
+                padding: 10px;
                 position: sticky;
                 top: 0;
+                font-size: 15px;
             }
             .sidebar h3{
                 margin: 10px auto;
@@ -35,6 +38,11 @@
             }
             .currentTopic{
                 font-weight: bold;
+            }
+            .content {
+                padding: 20px;
+                width: 70%;
+                flex-direction: column;
             }
             button {
                 position: fixed;
