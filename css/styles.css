@@ -77,9 +77,22 @@ nav ul li a:hover{
 footer{
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin: 20px 0px;
-    width: 100%;
+    padding-bottom: 20px;
+}
+
+footer section {
+    width: 50%;
+    margin-left: 20%;
+}
+
+footer p {
+    padding: 0;
+    margin: 2px;
+    color:#34495e;
+}
+
+footer h4 {
+    color:#34495e;
 }
 
 footer a {
