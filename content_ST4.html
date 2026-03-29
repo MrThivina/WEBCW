@@ -13,7 +13,7 @@
                 display: flex;
             }
             .sidebar{
-                width: 30%;
+                width: 20%;
                 height: auto;
                 background: #e8f5e9;
                 padding: 10px;
@@ -41,22 +41,8 @@
             }
             .content {
                 padding: 20px;
-                width: 70%;
+                width: 80%;
                 flex-direction: column;
-            }
-            button {
-                position: fixed;
-                bottom: 5%;
-                right: 5%;
-                background-color: rgb(39, 118, 188);
-                border: none;
-                padding: 10px;
-                border-radius: 15px;
-            }
-            button a{
-                text-decoration: none;
-                color: white;
-                font-weight: bold;
             }
         </style>
     </head>
@@ -86,51 +72,56 @@
             </nav>
         </header>
         <hr>
-        <main id="top">
-             <aside class="sidebar">
+        <main id="top">            
+            <aside class="sidebar">
                 <h3>Content</h3>
                 <ul class="sidebarList">
                     <li>
                         <a href="content_ST1.html">Why Clean Energy Matters Today</a>
                         <ul class="subtopics">
-                            <li><a href="#">Subtopic1</a></li>
-                            <li><a href="#">Subtopic2</a></li>
-                            <li><a href="#">Subtopic3</a></li>
+                            <li><a href="content_ST1.html#climate">Climate Change & Protection</a></li>
+                            <li><a href="content_ST1.html#health">Health & Less Pollution</a></li>
+                            <li><a href="content_ST1.html#econ">Economic Growth & Energy Security</a></li>
+                            <li><a href="content_ST1.html#sus">Sustainable Future Benefits</a></li>
                         </ul>
                     </li>
 
                     <li>
                         <a href="content_ST2.html">Types of Renewable Energy</a>
                         <ul class="subtopics">
-                            <li><a href="#solar">Solar Energy</a></li>
-                            <li><a href="#wind">Wind Energy</a></li>
-                            <li><a href="#hydro">Hydropower</a></li>
-                            <li><a href="#geo">Geothermal Energy</a></li>
+                            <li><a href="content_ST2.html#solar">Solar Energy</a></li>
+                            <li><a href="content_ST2.html#wind">Wind Energy</a></li>
+                            <li><a href="content_ST2.html#hydro">Hydropower</a></li>
+                            <li><a href="content_ST2.html#geo">Geothermal Energy</a></li>
                         </ul>
                     </li>
 
                     <li>
                         <a href="content_ST3.html">Sustainable Living & Energy Saving</a>
                         <ul class="subtopics">
-                            <li><a href="#">Subtopic1</a></li>
-                            <li><a href="#">Subtopic2</a></li>
-                            <li><a href="#">Subtopic3</a></li>
+                            <li><a href="content_ST3.html#para1">Efficient Energy Use at Home</a></li>
+                            <li><a href="content_ST3.html#para2">Renewable Energy Sources</a></li>
+                            <li><a href="content_ST3.html#para3">Sustainable Transportation Choices</a></li>
+                            <li><a href="content_ST3.html#para4">Reducing Waste and Conserving Resources</a></li>
                         </ul>
                     </li>
 
                     <li>
                         <a href="content_ST4.html" class="currentTopic">The Future of Clean Energy</a>
                         <ul class="subtopics">
-                            <li><a href="#">Subtopic1</a></li>
-                            <li><a href="#">Subtopic2</a></li>
-                            <li><a href="#">Subtopic3</a></li>
+                            <li><a href="content_ST4.html#">Subtopic1</a></li>
+                            <li><a href="content_ST4.html#">Subtopic2</a></li>
+                            <li><a href="content_ST4.html#">Subtopic3</a></li>
                         </ul>
                     </li>
                 </ul>
             </aside>
+            <section class="content">
+                <h1>Potato</h1>
+            </section>
         </main>
         <hr>
-        <button><a href="#top">Go to top</a></button>
+        <p id="backtotop"><a href="#top">Back to top</a></p>
         <footer>
             <div>
                 <p class="footerheading">Page Author</p>

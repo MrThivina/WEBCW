@@ -32,6 +32,7 @@
 
         .splashContent {
             align-items: center;
+            margin: auto;
         }
 
         .splashContent h1{
@@ -130,9 +131,11 @@
 
         let timer = setInterval(function(){
             time--;
-            countdown.textContent = "Entering site in "+ time +"...";
-
-            if(time <= 0){
+            
+            if(time > 0){
+                countdown.textContent = "Entering site in " + time + "...";
+            }else{
+                countdown.textContent = "Entering site...";
                 clearInterval(timer);
             }
             
