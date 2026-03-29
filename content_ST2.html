@@ -9,115 +9,86 @@
     <title>GoGreen</title>
     <link rel="stylesheet" href="css/styles.css">
 
-    <style>
+        <style>
 
-        .layout {
-            display: flex;
-        }
+            .layout{
+                display: flex;
+            }
+            .sidebar{
+                width: 30%;
+                height: auto;
+                background: #e8f5e9;
+                padding: 10px;
+                position: sticky;
+                top: 0;
+                font-size: 15px;
+            }
+            .sidebar h3{
+                margin: 10px auto;
+                color: #4085aa;
+            }
+            .sidebarList li{
+                margin: 5px auto;
+                list-style: disc;                
+            }
+            .subtopics li{
+                list-style: circle;
+            }
+            .sidebar a{
+                text-decoration: none;
+                color: black;
+            }
+            .currentTopic{
+                font-weight: bold;
+            }
+            .content {
+                padding: 20px;
+                width: 70%;
+                flex-direction: column;
+            }
+            button {
+                position: fixed;
+                bottom: 5%;
+                right: 5%;
+                background-color: rgb(39, 118, 188);
+                border: none;
+                padding: 10px;
+                border-radius: 15px;
+            }
+            button a{
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+            }
 
-        .sidebar {
-            width: 250px;
-            background: #e8f5e9;
-            padding: 20px;
-            height: auto;
-            position: sticky;
-            top: 0;
-        }
-
-        .sidebar h3 {
-            margin: 10px 0;
-            color: #4085aa;
-        }
-
-        .sidebarList li {
-            margin: 5px 0;
-        }
-
-        .subtopics li {
-            list-style: circle;
-        }
-
-        .sidebar a {
-            text-decoration: none;
-            color: black;
-        }
-
-        .currentTopic {
-            font-weight: bold;
-            color: green;
-        }
-
-        .content {
-            padding: 20px;
-            flex-direction: column;
-        }
-
-        .content h1 {
-            margin-bottom: 10px;
-        }
-
-        .content h2 {
-            margin-top: 25px;
-            text-align: left;
-        }
-
-        .content ul {
-            margin-left: 20px;
-        }
-        img{
-            width: 100%;
-            height: auto;
-            align-items: center;
-        }
-        .content p{
-            margin: 0;
-        }
-        button {
-            position: fixed;
-            bottom: 5%;
-            right: 5%;
-            background-color: rgb(39, 118, 188);
-            border: none;
-            padding: 10px;
-            border-radius: 15px;
-        }
-        button a{
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-        }
-
-    </style>
+        </style>
 </head>
 
 <body>
-
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div class="headerOutline">
-                    <div class="borderlogo">
-                        <a href="home.html"><img src="images/logo.png" alt="GoGreen logo" id="logo"></a>
-                    </div>
-
-                    <div class="navbar">
-                        <ul>
-                            <li><a href="home.html">Home</a></li>
-                            <li><a href="content.html" class="active">Content</a></li>
-                            <li><a href="ais.html">Simulator</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="feedback.html">Feedback</a></li>
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="sitemap.html">Sitemap</a></li>
-                        </ul>
-                    </div>
-                    <div class="borderlogo">
-                        <a href="profile.html"><img src="images/USER_PROFILE.png" alt="user profile" id="login"></a>
-                    </div>
+    <header>
+        <nav>
+            <div class="headerOutline">
+                <div class="borderlogo">
+                    <a href="home.html"><img src="images/logo.png" alt="GoGreen logo" id="logo"></a>
                 </div>
-            </nav>
-        </header>
+
+                <div class="navbar">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="content.html" class="active">Content</a></li>
+                        <li><a href="ais.html">Simulator</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="borderlogo">
+                    <a href="profile.html"><img src="images/USER_PROFILE.png" alt="user profile" id="login"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <hr>
 
