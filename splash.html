@@ -12,6 +12,15 @@
 
     <style>
 
+        .nutella {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
         body{
             background-image: url(images/bg.png);
             background-size:cover;
@@ -20,6 +29,7 @@
             color:#2BA62F;
             margin: 5px;
         }
+
         .splashContent {
             align-items: center;
         }
@@ -85,29 +95,32 @@
 </head>
 
 <body>
-    <!-- Splash screen showing introduction to SDG 7 -->
-    <div class="splashContent">
 
-        <h1>Affordable & Clean Energy</h1>
-        <h2>for the future</h2>
+    <div class="nutella">
+        <!-- Splash screen showing introduction to SDG 7 -->
+        <div class="splashContent">
 
-        <h3>Promoting clean and affordable energy solutions for a sustainable and better future. </h3><br>
-        <img src="images/logo.png" alt="GoGreen logo" id="splashlogo">
+            <h1>Affordable & Clean Energy</h1>
+            <h2>for the future</h2>
 
+            <h3>Promoting clean and affordable energy solutions for a sustainable and better future. </h3><br>
+            <img src="images/logo.png" alt="GoGreen logo" id="splashlogo">
+
+        </div>
+
+        <div class="team">
+
+            <h3>A project by:</h3>
+            <h3>Thivina Abishek | Damian De Cruz | Danella De Cruz | Randil Shehan</h3><br>
+
+        </div>
+
+        <div class="loader"></div>
+
+        <p id="countdown">Entering site in 4...</p>
+
+        <button id="skip" aria-label="Skip intro and go to home page">Skip Intro</button>
     </div>
-
-    <div class="team">
-
-        <h3>A project by:</h3>
-        <h3>Thivina Abishek | Damian De Cruz | Danella De Cruz | Randil Shehan</h3><br>
-
-    </div>
-
-    <div class="loader"></div>
-
-    <p id="countdown">Entering site in 4...</p>
-
-    <button id="skip" aria-label="Skip intro and go to home page">Skip Intro</button>
 
 
     <script>
