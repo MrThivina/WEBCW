@@ -16,12 +16,14 @@
             h2 {
                 padding: 10px;
                 text-align: center;
-                color: #2C9452;
+                color: #353E43;
+                font-size: 20px;
             }
             h3 {
                 padding: 0 20px;
                 text-align: center;
-                color: #353E43;
+                color: #2C9452;
+                font-size: 20px;
             }
             p {
                 padding: 0 20px 0 20px ;
@@ -62,6 +64,10 @@
                 background: #565e63c4;
                 border-radius: 20px;
                 overflow: hidden;
+            }
+            .button_position {
+                display: flex;
+                justify-content: center;
             }
             #progress-bar {
                 height: 24px;
@@ -105,70 +111,60 @@
 
         <main>
             <h1>USER PROFILE</h1>
-            <section>
-                <center>
-                    <button onclick="createUser()" id="user_button">CREATE</button>
-                </center>
-            </section>
+            <div id="user_button" class="button_position">
+                <button onclick="createUser()">CREATE</button>
+            </div>
 
             <br>
             
-            <section class="outline">
+            <div class="outline">
                 <section class="sectionCard">
-                    <h3>PERSONAL INFORMATION</h3>
+                    <h2>PERSONAL INFORMATION</h2>
                     <span id="personal"></span>
-                    <center>
-                        <span id="personal_buttons">
-                            <button onclick="personal()">START</button>
-                        </span>
-                    </center>
+                    <span id="personal_buttons" class="button_position">
+                        <button onclick="personal()">START</button>
+                    </span>
                 </section>
 
                 <div class="spacing"></div>
 
                 <section class="sectionCard">
-                    <h3>CONTACT DETAILS</h3>
+                    <h2>CONTACT DETAILS</h2>
                     <span id="contact"></span>
-                    <center>
-                        <span id="contact_buttons">
-                            <button onclick="contact()">START</button>
-                        </span>
-                    </center>
+                    <span id="contact_buttons" class="button_position">
+                        <button onclick="contact()">START</button>
+                    </span>
                 </section>
-            </section>
+            </div>
 
-            <section class="outline">
+            <div class="outline">
                 <section class="sectionCard">
-                    <h3>INTERESTS</h3>
+                    <h2>INTERESTS</h2>
                     <span id="interests"></span>
-                    <center>
-                        <span id="interest_buttons">
-                            <button onclick="interests()">START</button>
-                        </span>
-                    </center>
+                    <span id="interest_buttons" class="button_position">
+                        <button onclick="interests()">START</button>
+                    </span>
                 </section>
 
                 <div class="spacing"></div>
 
                 <section class="sectionCard">
-                    <h3>GOALS & TARGETS</h3>
+                    <h2>GOALS & TARGETS</h2>
                     <span id="goals"></span>
-                    <center>
-                        <span id="goals_buttons">
-                            <button onclick="goals()">START</button>
-                        </span>
-                    </center>
+                    <span id="goals_buttons" class="button_position">
+                        <button onclick="goals()">START</button>
+                    </span>
                 </section>
-            </section>
+            </div>
             
-            <section class="progress-container">
-                <section id="progress-bar">0.00%</section>
-            </section>
-            <section>
-                <h2 id="status"></h2>
-            </section>
+            <div class="progress-container">
+                <div id="progress-bar">0.00%</div>
+                </div>
+
+            <div id="status"></div>
         </main>
 
+        <br>
         <hr>
 
         <footer>
@@ -208,28 +204,6 @@
                 contact() ;
                 interests() ;
                 goals() ;
-
-                if (progress == 12) {
-                    var messageBody = 
-                    `Name : ${name}
-                    D.O.B : ${dob}
-                    Username : ${username}
-                    
-                    Mobile Number : ${mobile}
-                    Email Address : ${email}
-                    Home Address : ${address}
-                    
-                    What aspects of clean and affordable energy interest you the most? : ${aspects}
-                    Have you participated in or followed any activities, projects, or initiatives related to renewable energy? If yes, describe them : ${activities}
-                    How do you currently practice or support energy conservation in your daily life? : ${practice}
-                    
-                    What specific changes would you like to see in your community or country regarding access to clean and affordable energy? : ${public_changes}
-                    Do you have any personal or group goals related to promoting renewable energy or reducing energy consumption? Please explain. : ${personal_goals}
-                    What measurable targets would you like to achieve within a set timeframe? (e.g. : reducing electricity usage, adopting solar energy, awareness campaigns) : ${measurable_targets}`
-
-                    var link = "mailto:damian.20250423@iit.ac.lk?subject=" + encodeURIComponent("User Created") + "&body=" + encodeURIComponent(messageBody) ;
-                    window.location.href = link ;
-                }
             }
 
             function personal() {
@@ -546,17 +520,38 @@
                 document.getElementById("progress-bar").innerText = percentage.toFixed(2) + "%" ;
 
                 if (progress != 0) {
-                    document.getElementById("user_button").textContent = "CONTINUE" ;
+                    document.getElementById("user_button").innerHTML = `<button onclick="createUser()">CONTINUE</button>` ;
                 } else {
-                    document.getElementById("user_button").textContent = "CREATE" ;
+                    document.getElementById("user_button").innerHTML = `<button onclick="createUser()">CREATE</button>` ;
                 }
 
                 if (percentage == 100) {
-                    document.getElementById("status").textContent = "PROFILE COMPLETE" ;
-                    document.getElementById("user_button").textContent = "SUBMIT" ;
+                    document.getElementById("status").innerHTML = `<h3>PROFILE COMPLETE</h3>` ;
+                    document.getElementById("user_button").innerHTML = `<button onclick="submit()">SUBMIT</button>` ;
                 } else {
-                    document.getElementById("status").textContent = "" ;
+                    document.getElementById("status").innerHTML = "" ;
                 }
+            }
+
+            function submit() {
+                var messageBody = 
+                `Name : ${name}
+                D.O.B : ${dob}
+                Username : ${username}
+                
+                Mobile Number : ${mobile}
+                Email Address : ${email}
+                Home Address : ${address}
+                
+                What aspects of clean and affordable energy interest you the most? : ${aspects}
+                Have you participated in or followed any activities, projects, or initiatives related to renewable energy? If yes, describe them : ${activities}
+                How do you currently practice or support energy conservation in your daily life? : ${practice}
+                
+                What specific changes would you like to see in your community or country regarding access to clean and affordable energy? : ${public_changes}
+                Do you have any personal or group goals related to promoting renewable energy or reducing energy consumption? Please explain. : ${personal_goals}
+                What measurable targets would you like to achieve within a set timeframe? (e.g. : reducing electricity usage, adopting solar energy, awareness campaigns) : ${measurable_targets}`
+                var link = "mailto:damian.20250423@iit.ac.lk?subject=" + encodeURIComponent("User Created") + "&body=" + encodeURIComponent(messageBody) ;
+                window.location.href = link ;
             }
         </script>
     </body>
