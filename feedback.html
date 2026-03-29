@@ -101,7 +101,7 @@
 
             .review{
                 width: 30%;
-                background-color: #2d9ad4b7;
+                background-color: #ffffffb7;
                 border-radius: 10px;
                 margin: 10px 10px;
                 padding: 10px;
@@ -111,9 +111,18 @@
                 margin: 5px 0px 5px 10px;
             }
 
+            .review h2{
+                font-weight: 300;
+                font-size: 15px;
+            }
+
             .sec2 .review{
                 width: auto;
-                margin: 10px 45px;
+                margin: 10px 70px;
+            }
+
+            #data{
+                text-align: center;
             }
             
             .overall{
@@ -123,8 +132,8 @@
             }
 
             .overall h1,
+            .overall h2,
             .overall h3,
-            .overall h4,
             .overall button{
                 margin: 5px 0px 5px 10px;
             }
@@ -134,22 +143,23 @@
                 color: #37883d;
             }
 
-            .overall h3{
+            .overall h2{
                 font-weight: 200;
             }
 
-            .overall h4{
+            .overall h3{
                 font-weight: 300;
             }
 
             .overall button{
                 font-size: 30px;
-                background: green;
+                background: #37883d;
                 color: white;
                 border: none;
                 padding: 10px;
                 border-radius: 50px;
                 cursor: pointer;
+                margin: auto ;
             }
 
             form {
@@ -313,13 +323,15 @@
                 <section class="sec1">
                     <div class="overall">
                         <h1>9.5/10</h1>
-                        <h3>Exceptional</h3>
-                        <h4>911 reviews</h4>
-                        <button>See All Reviews</button>
+                        <div id="data">
+                            <h2>Exceptional</h2>
+                            <h3>911 reviews</h3>
+                            <button>See All Reviews</button>
+                        </div>
                     </div>
                     <div class="review">
                         <h1>9.5/10</h1><br>
-                        <h3>There are some really good ideas and initiatives presented here, but the layout could be improved slightly to make everything easier to find. The content itself is useful and relevant, especially for students looking to take action on energy consumption.</h3>
+                        <h2>There are some really good ideas and initiatives presented here, but the layout could be improved slightly to make everything easier to find. The content itself is useful and relevant, especially for students looking to take action on energy consumption.</h2>
                         <a href="#">see more</a>
                         <div class="p-data">
                             <p>Name : Ben Stocks</p>
@@ -328,7 +340,7 @@
                     </div>
                     <div class="review">
                         <h1>9.9/10</h1><br>
-                        <h3>I like how the site focuses on real actions rather than just explaining the problem. It’s simple, informative, and encourages users to be more environmentally responsible.</h3>
+                        <h2>I like how the site focuses on real actions rather than just explaining the problem. It’s simple, informative, and encourages users to be more environmentally responsible.</h2>
                         <a href="#">see more</a>
                         <div class="p-data">
                             <p>Name : Ab Divilias</p>
@@ -339,7 +351,7 @@
                 <section class="sec2">
                     <div class="review">
                         <h1>8.5/10</h1><br>
-                        <h3>This platform is really helpful for finding ways to get involved in clean energy initiatives. The information is clear and easy to follow, and I especially liked how the programs are explained with practical examples. It motivated me to start making small changes in my daily life.</h3>
+                        <h2>This platform is really helpful for finding ways to get involved in clean energy initiatives. The information is clear and easy to follow, and I especially liked how the programs are explained with practical examples. It motivated me to start making small changes in my daily life.</h2>
                         <a href="#">see more</a>
                         <div class="p-data">
                             <p>Name : Sam Curren</p>
