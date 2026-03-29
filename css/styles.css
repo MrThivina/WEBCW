@@ -13,6 +13,10 @@ h2{
     margin-top: 20px;
 }
 
+main{
+    width:100%;
+}
+
 hr{
     width: 100%;
     margin: 0px;
@@ -223,11 +227,14 @@ footer a:hover{
     border: none;
     padding: 10px;
     border-radius: 15px;
-}
-
-#backtotop a {
     text-decoration: none;
     font-family: Poppins;
     font-weight: 600;
     color: white;
+}
+
+#backtotop:hover{
+    background-color: white;
+    color: #2C9452;
+    transition: 0.3s ease;
 }

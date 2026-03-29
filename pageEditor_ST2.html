@@ -56,18 +56,23 @@
                 <h2 id="splash">Splash Screen</h2>
                     <h3>Technical Description</h3>
 
-                        <p>The splash screen was implemented using a structured HTML layout with clearly organised content sections. Semantic elements such as headings (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, and <code>&lt;h3&gt;</code>) were used to present the main theme of SDG 7 and supporting text, ensuring a logical content hierarchy. A <code>&lt;meta&gt;</code> refresh tag was included to automatically redirect users to the home page after four seconds, fulfilling the requirement for timed navigation.</p>
+                        <p>The splash screen was implemented using a structured HTML layout to present an introductory view of the website. The content is grouped within a <code>&lt;div&gt;</code> container with the class <code>splashScreen</code>, which contains headings, a logo image, team member details, a loader animation, and a countdown timer. This structure ensures that all elements are logically organised and easy to manage.</p>
 
-                        <p>CSS was used to enhance the visual presentation of the page. A full screen background image was applied using <strong>background-image</strong>, along with <strong>background-size: cover</strong> and <strong>background-position: center</strong> to ensure proper scaling across different screen sizes. Text was centred to improve readability and maintain a clean layout. A loading animation was created using <strong>CSS keyframe animation</strong>, where a circular element rotates continuously to provide visual feedback during the waiting period.</p>
+                        <p>CSS was used to design and position the elements centrally on the page. Flexbox was applied to the <code>&lt;body&gt;</code> using <code>display: flex</code>, <code>justify-content: center</code>, and <code>align-items: center</code> to vertically and horizontally align the content. A background image was applied and styled using <code>background-size: cover</code> and <code>background-position: center</code> to ensure full-screen coverage across different devices.</p>
 
-                        <p>JavaScript was used to implement dynamic functionality, specifically a countdown timer that updates the displayed text every second using <strong>setInterval</strong>. This provides users with clear feedback on when the page will redirect. Additionally, an <strong>event listener</strong> was added to the skip button, allowing users to manually navigate to the home page using <strong>window.location.href</strong>. These features improve usability by offering both automatic and user controlled navigation options.</p> 
+                        <p>The loader animation was implemented using CSS keyframes. A circular element was styled using borders, and the <code>@keyframes rotate</code> animation was applied to continuously rotate the loader, creating a smooth visual loading effect without the need for JavaScript.</p>
+
+                        <p>JavaScript was used to implement a countdown timer. The <code>setInterval()</code> function decreases a timer value every second and dynamically updates the text content of the countdown element. Once the timer reaches zero, the interval is cleared, stopping the countdown. Additionally, a skip button was implemented using an <code>onclick</code> event, allowing users to immediately navigate to the home page using <code>window.location.href</code>.</p>
                     
                     <h3>Accessibility</h3>
-                        <p>Accessibility was considered in the design of the splash screen to ensure usability for a wide range of users. Semantic HTML elements such as headings (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, and <code>&lt;h3&gt;</code>) were used to create a clear content hierarchy, allowing assistive technologies such as screen readers to interpret the page structure effectively.</p>
 
-                        <p>Images on the page include descriptive alternative text, ensuring that users who cannot see visual content can still understand its purpose. Additionally, an <code>aria-label</code> was applied to the skip button to clearly describe its function, enabling screen reader users to bypass the splash screen and access the main content immediately.</p>
+                        <p>Accessibility was considered in the design of the splash screen to ensure that it is usable for a wide range of users. Semantic HTML elements such as headings (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, and <code>&lt;h3&gt;</code>) were used to create a clear content hierarchy, allowing assistive technologies to interpret the structure of the page effectively.</p>
 
-                        <p>The design also maintains sufficient colour contrast between text and background, improving readability. Providing both an automatic redirect and a manual skip option ensures flexibility, accommodating users with different needs and preferences.</p>
+                        <p>The logo image includes descriptive alternative text, enabling screen reader users to understand its purpose. The skip button also includes an <code>aria-label</code>, providing additional context for users relying on assistive technologies and allowing them to bypass the splash screen and access the main content immediately.</p>
+
+                        <p>Visual accessibility was addressed through the use of sufficient colour contrast between text and background, ensuring readability. The layout was designed to be simple and centred, reducing cognitive load and making the content easy to follow.</p>
+
+                        <p>The countdown text is dynamically updated, providing clear feedback to users about when the page will transition. Additionally, the presence of a skip button ensures that users are not forced to wait, improving overall usability and accessibility.</p>
                     
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
                         <p><a href="validation_ST2.html#splashVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
@@ -79,23 +84,23 @@
             <section>
                 <h2 id="ais">AIS page</h2>
                     <h3>Technical Description</h3>
-                        <p>The Action Impact Simulator (AIS) was developed using a structured HTML layout to organise interactive content clearly. The main content is contained within a <code>&lt;main&gt;</code> element, with action cards grouped into two sections (<code>&lt;section id="section1"&gt;</code> and <code>&lt;section id="section2"&gt;</code>) for logical organisation. Each action is represented using a <code>&lt;div&gt;</code> with the class <code>actionCards</code>, containing an image, heading, description, and associated impact points, ensuring consistency across all elements.</p>
+                        <p>The Action Impact Simulator (AIS) was developed using a structured HTML layout to organise interactive elements clearly. The main content is contained within a <code>&lt;main&gt;</code> element, with two <code>&lt;section&gt;</code> elements (<code>#section1</code> and <code>#section2</code>) used to group the action cards. Each action is represented using a <code>&lt;div&gt;</code> with the class <code>actionCards</code>, containing an image, heading, description, and impact points, ensuring a consistent and scalable structure.</p>
 
-                        <p>CSS was used to create a responsive and visually engaging layout. Flexbox was applied to arrange action cards using <code>display: flex</code>, <code>justify-content</code>, and spacing properties, ensuring even distribution across the page. Styling features such as hover effects, transformations, and box shadows were implemented to enhance interactivity. A container element (<code>.cardsContainer</code>) was styled to allow dynamic background image changes based on the user’s impact level, reinforcing visual feedback.</p>
+                        <p>CSS was used to design the layout and enhance visual interaction. Flexbox was applied to arrange the action cards horizontally using <code>display: flex</code> and spacing properties such as <code>gap</code> and <code>margin</code>. Hover effects and transformations were used to improve interactivity, while the <code>.selected</code> class visually highlights selected cards. The <code>.cardsContainer</code> element was styled to support dynamic background changes based on user interaction.</p>
 
-                        <p>JavaScript was used to implement the core interactive functionality. Event listeners were attached to each action card to detect user clicks. When a card is selected, a <code>selected</code> class is toggled, and a total score is updated dynamically based on predefined impact values. Conditional statements are used to determine the user’s impact level (low, medium, or high) based on score thresholds.</p>
+                        <p>JavaScript was used to implement the core functionality of the simulator. All action cards were selected using <code>document.querySelectorAll()</code>, and event listeners were attached to detect user clicks. When a card is selected or deselected, the <code>handleCardClick</code> function updates the total score based on predefined impact values associated with each card.</p>
 
-                        <p>The feedback system updates dynamically through DOM manipulation, including displaying the total score, updating descriptive text and modifying the background image. Additionally, a visual indicator is used to reinforce the user’s impact level through colour changes. The element changes colour dynamically based on the calculated score, providing a simple and immediate representation of the user’s overall impact. The feedback section is initially hidden and only appears when the user interacts with the simulator, improving usability and maintaining a clean interface.</p>
+                        <p>Conditional statements were used to determine the user’s impact level (low, medium, or high) based on score thresholds. The page dynamically updates feedback using DOM manipulation, including updating the total score, displaying descriptive feedback, and changing the background image of the container. A visual indicator bar also changes colour based on the impact level, reinforcing the feedback provided to the user.</p>
 
                     <h3>Accessibility</h3>
-                        <p>Accessibility was considered in the design of the Action Impact Simulator to ensure that the content is usable for a wide range of users. Semantic HTML elements such as <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, and headings were used to provide a clear and logical structure, allowing assistive technologies to interpret the page effectively.</p>
 
-                        <p>All images within the action cards include descriptive alternative text, enabling users who rely on screen readers to understand the purpose of each action. Text content is clearly structured using headings and paragraphs, improving readability and navigation throughout the page.</p>
+                        <p>Accessibility was considered in the design of the Action Impact Simulator to ensure that interactive content is usable for a wide range of users. Semantic HTML elements such as <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, and heading tags were used to provide a clear structure, allowing assistive technologies to interpret the content effectively.</p>
 
-                        <p>Visual feedback is provided through colour changes, background images, and highlighted selections, helping users easily understand their progress and impact level. The feedback summary section is dynamically displayed only when interaction occurs, reducing unnecessary content and improving user focus.</p>
+                        <p>All images within the action cards include descriptive alternative text, ensuring that users who rely on screen readers can understand the purpose of each action. Text content is organised using headings and paragraphs, improving readability and navigation throughout the page.</p>
 
-                        <p>The layout is designed to be simple and intuitive, with clearly identifiable interactive elements. Consistent styling and spacing improve readability, while the use of contrasting colours ensures that text remains visible against background elements.</p>
+                        <p>Visual feedback is provided through colour changes, background images, and highlighted selections, allowing users to easily understand their progress and impact level. The feedback summary section is hidden by default and only displayed when the user interacts with the simulator, reducing unnecessary content and improving focus.</p>
 
+                        <p>The layout is designed to be simple and intuitive, with clearly identifiable interactive elements. Consistent styling, spacing, and sufficient colour contrast ensure that the content remains readable and accessible across different devices and screen sizes.</p>
 
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
                         <p><a href="validation_ST2.html#aisVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
@@ -109,25 +114,30 @@
                 <h2 id="content">Content Page</h2>
                     <h3>Technical Description</h3>
 
-                        <p>The content page was structured using semantic HTML elements to organise information clearly and logically. A <code>&lt;main&gt;</code> element with the class <code>layout</code> was used to divide the page into two main sections: a sidebar and the main content area. The sidebar was implemented using the <code>&lt;aside&gt;</code> element, containing a list of links to both internal sections and other content pages, supporting navigation across the website.</p>
+                        <p>The content page was structured using semantic HTML elements to organise information clearly and logically. The main layout is implemented using a <code>&lt;main&gt;</code> element with the class <code>layout</code>, which divides the page into two sections: a sidebar and the main content area. The sidebar is created using the <code>&lt;aside&gt;</code> element, while the main content is contained within a <code>&lt;section&gt;</code> element.</p>
 
-                        <p>CSS Flexbox was used to create the layout, with the <code>.layout</code> class applying <code>display: flex</code> to position the sidebar and content side by side. The sidebar was styled using <code>position: sticky</code> to ensure it remains visible while scrolling, improving usability. Additional styling such as spacing, background colours, and typography were applied to maintain a clean and readable design.</p>
+                        <p>CSS Flexbox was used to design the layout, with the <code>.layout</code> class applying <code>display: flex</code> to position the sidebar and content side by side. The sidebar is styled using <code>position: sticky</code> with a top value of 0, allowing it to remain visible while the user scrolls through the page. This improves navigation and usability.</p>
 
-                        <p>Internal navigation was implemented using anchor links, allowing users to quickly navigate to specific sections of the page such as solar, wind, hydropower, and geothermal energy. Each section is identified using unique <code>id</code> attributes, which correspond to links in the sidebar. This enhances user experience by providing efficient access to different parts of the content.</p>
+                        <p>Navigation within the page was implemented using anchor links. Each section of the content, such as solar, wind, hydropower, and geothermal energy, is assigned a unique <code>id</code> attribute. These correspond to links in the sidebar, enabling users to quickly jump to specific sections of the page. Additional navigation links are provided to access other content pages, ensuring consistency across the website.</p>
 
-                        <p>Images were included within each section to visually support the written content. CSS was used to ensure images are responsive by setting their width to 100% and height to auto, preventing distortion across different screen sizes. Overall, the design focuses on clarity, readability, and ease of navigation.</p>
+                        <p>Images were included within each section to support the written content. CSS was used to ensure images are responsive by setting their width to 100% and height to auto, preventing distortion across different screen sizes. Overall, the page focuses on clear structure, readability, and efficient navigation.</p>
 
-
+                        <p>A “Back to top” navigation feature was also implemented using an anchor link that references the top of the page. This allows users to quickly return to the beginning of the content without excessive scrolling, improving navigation efficiency.</p>
+                    
                     <h3>Accessibility</h3>
-                        <p>Accessibility was considered in the design of the content page to ensure that information is accessible to a wide range of users. Semantic HTML elements such as <code>&lt;main&gt;</code>, <code>&lt;aside&gt;</code>, and heading tags were used to provide a clear and meaningful structure, allowing assistive technologies to interpret the content effectively.</p>
+                        
+                        <p>Accessibility was considered in the design of the content page to ensure that information is accessible to a wide range of users. Semantic HTML elements such as <code>&lt;main&gt;</code>, <code>&lt;aside&gt;</code>, and heading tags were used to create a clear and meaningful structure, allowing assistive technologies to interpret the page effectively.</p>
 
-                        <p>All images include descriptive alternative text, ensuring that users who rely on screen readers can understand the visual content. Headings are used in a logical hierarchy, making it easier for users to navigate through different sections of the page.</p>
+                        <p>All images include descriptive alternative text, ensuring that users who rely on screen readers can understand the visual content. Headings are organised in a logical hierarchy, making it easier for users to navigate through different sections of the page.</p>
 
-                        <p>The sidebar navigation provides clear and consistent links to both internal sections and other content pages, improving usability. The use of anchor links allows users to quickly jump to relevant sections without excessive scrolling.</p>
+                        <p>The sidebar navigation provides clear and consistent links to both internal sections and other content pages. The use of anchor links allows users to quickly jump to relevant sections without excessive scrolling, improving overall usability.</p>
 
-                        <p>Colour contrast between text and background was maintained to ensure readability, and the layout was designed to be simple and intuitive. The use of responsive design techniques ensures that the page remains accessible and usable across different screen sizes and devices.</p>
-
+                        <p>The page design maintains sufficient colour contrast between text and background to ensure readability. The layout is simple and structured, reducing cognitive load and making the content easier to understand. Additionally, responsive design techniques ensure that the page remains accessible across different devices and screen sizes.</p>
+                        
+                        <p>A “Back to top” link is provided at the bottom of the page, allowing users to easily navigate back to the top. This reduces the need for excessive scrolling and improves usability, particularly for users navigating long content sections.</p>
+                    
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        
                         <p><a href="validation_ST2.html#contentVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
 
                         
@@ -265,11 +275,10 @@
                 <p>The following resources were used in the development of this website:</p>
 
                 <ul class="ref">
+                    
                     <li>United Nations. (n.d.). <i>Sustainable Development Goal 7: Affordable and Clean Energy</i>. Available at: https://sdgs.un.org/goals/goal7</li><br>
 
                     <li>W3Schools. (n.d.). <i>HTML, CSS and JavaScript Tutorials</i>. Available at: https://www.w3schools.com/</li><br>
-
-                    <li>MDN Web Docs. (n.d.). <i>Web Development Documentation</i>. Available at: https://developer.mozilla.org/</li><br>
 
                     <li>Pexels. (n.d.). 
                         Solar image by adrinildennis (ID: 27873610), 
@@ -279,7 +288,9 @@
                         Available at: https://www.pexels.com/
                     </li><br>
 
-                    <li>AI-generated images were used for the splash screen background, website logo, and Action Impact Simulator icons and background visuals. These were created for educational purposes.</li><br>
+                    <li>https://www.pinterest.com/ <i>Splash screen background image</i>. Available at: https://pin.it/6MswnRZSC</li>
+
+                    <li>AI-generated images were used for the website logo, and Action Impact Simulator icons and background visuals. These were created for educational purposes.</li><br>
                 </ul>
             </section>
 
